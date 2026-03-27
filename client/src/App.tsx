@@ -7,6 +7,9 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import RotationalMagneticTherapy from "./pages/RotationalMagneticTherapy";
 import GolfRecoveryFAQ from "./pages/GolfRecoveryFAQ";
+import MagneticTherapyVsPEMF from "./pages/MagneticTherapyVsPEMF";
+import BuyersGuide from "./pages/BuyersGuide";
+import About from "./pages/About";
 
 
 function Router() {
@@ -15,6 +18,9 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/rotational-magnetic-therapy"} component={RotationalMagneticTherapy} />
       <Route path={"/golf-recovery-faq"} component={GolfRecoveryFAQ} />
+      <Route path={"/magnetic-therapy-vs-pemf"} component={MagneticTherapyVsPEMF} />
+      <Route path={"/buyers-guide"} component={BuyersGuide} />
+      <Route path={"/about"} component={About} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
