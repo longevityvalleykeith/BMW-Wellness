@@ -241,7 +241,7 @@ export default function RotationalMagneticTherapy() {
             <AccordionItem value="item-5" className="border-b-border">
               <AccordionTrigger className="text-lg font-serif text-primary">Is it safe?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Rotational magnetic therapy is a non-invasive wellness modality. It is not intended to diagnose, treat, cure, or prevent any disease. Consult a healthcare provider before beginning any new therapy regimen if you have concerns.
+                Rotational magnetic therapy is a non-invasive recovery modality. It is not intended to diagnose, treat, cure, or prevent any disease. Consult a healthcare provider before beginning any new therapy regimen if you have concerns.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

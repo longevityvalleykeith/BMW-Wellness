@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
-import { Sparkles, Target, Clock, Activity, Golf, Zap } from "lucide-react";
+import { Sparkles, Target, Clock, Activity, Flag, Zap } from "lucide-react";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -108,7 +108,7 @@ export default function GolfRecoveryFAQ() {
             transition={{ duration: 0.6 }}
           >
             <div className="inline-flex items-center space-x-2 bg-secondary/50 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6 border border-secondary">
-              <Golf className="w-4 h-4 text-accent" />
+              <Flag className="w-4 h-4 text-accent" />
               <span>Golf-Specific Recovery</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-serif text-primary mb-6">
@@ -253,7 +253,7 @@ export default function GolfRecoveryFAQ() {
             Experience rotational magnetic therapy at Malaysia's first golf club bio-energetic therapy lounge.
           </p>
           <Button size="lg" className="rounded-full text-lg px-8 bg-accent text-accent-foreground hover:bg-accent/90">
-            Book Your Golf Recovery Session <Golf className="ml-2 w-4 h-4" />
+            Book Your Golf Recovery Session <Flag className="ml-2 w-4 h-4" />
           </Button>
         </div>
       </section>

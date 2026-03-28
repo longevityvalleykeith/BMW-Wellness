@@ -52,7 +52,7 @@ export default function About() {
               DR MAGfield
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Malaysia's first golf club bio-energetic therapy lounge. Pioneering the future of holistic wellness by bridging ancient wisdom with modern Magnetic Vortex technology.
+              Malaysia's first golf club bio-energetic therapy lounge. Bridging ancient wisdom with modern performance technology at Kelab Rahman Putra Malaysia.
             </p>
           </motion.div>
         </div>
@@ -100,7 +100,7 @@ export default function About() {
                       The technology — 旋磁疗法 — uses continuously rotating magnetic fields combined with thermal therapy and gentle vibration to address recovery at a systemic level. This is <strong>not PEMF</strong>. Different mechanism. Different story. Different target user.
                     </p>
                     <p>
-                      When Dr MAGfield and Arie were looking for the right technology to power Malaysia's first golf club wellness lounge, they chose Professor Wang Shijie's rotational magnetic system — because it was built for athletes, not patients.
+                      When Dr MAGfield and Arie were looking for the right technology to power Malaysia's first golf club performance recovery lounge, they chose Professor Wang Shijie's rotational magnetic system — because it was built for athletes, not patients.
                     </p>
                   </div>
                 </div>

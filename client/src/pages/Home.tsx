@@ -72,14 +72,14 @@ export default function Home() {
           >
             <div className="inline-flex items-center space-x-2 bg-secondary/50 backdrop-blur-sm px-4 py-2 rounded-full text-secondary-foreground text-sm font-medium mb-6 border border-secondary">
               <Sparkles className="w-4 h-4 text-accent" />
-              <span>Ancient Energy Meets Modern Science</span>
+              <span>Turn Pain into Pure Performance</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-serif font-medium leading-tight mb-6 text-primary">
               Unlock Your Body's <br />
               <span className="italic text-accent">Natural Healing Power.</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-lg">
-              Experience the revolutionary fusion of ancient Qi wisdom and proprietary Magnetic Vortex technology for total body rejuvenation.
+              Experience the fusion of ancient Qi wisdom and proprietary Magnetic Vortex technology for total body performance recovery.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="rounded-full text-lg px-8 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20">
@@ -122,7 +122,7 @@ export default function Home() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20 aspect-[4/5] md:aspect-square">
                 <img 
                   src="/images/qi-master.webp" 
-                  alt="Dr. MAGField Qi Master Spinal Care Bed" 
+                  alt="DR MAGfield Qi Master Spinal Care Bed"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
@@ -162,7 +162,7 @@ export default function Home() {
                   Stress, poor posture, and age compress your spine, blocking your body's natural energy flow (Qi). This blockage is often the root of fatigue, pain, and poor health.
                 </p>
                 <p>
-                  More than a bed, the Qi Master is a daily ritual of holistic rejuvenation. Lie down, let the warmth melt away stress, and feel the magnetic energy gently coax your spine back into perfect alignment.
+                  More than a bed, the Qi Master is a daily performance ritual. Lie down, let the warmth melt away tension, and feel the magnetic energy driving your body back into peak alignment.
                 </p>
               </div>
 
@@ -206,7 +206,7 @@ export default function Home() {
           <Wind className="w-12 h-12 mx-auto mb-6 text-accent opacity-80" />
           <h2 className="text-3xl md:text-4xl font-serif mb-8">What is Magnetic Vortex Technology?</h2>
           <p className="text-xl md:text-2xl leading-relaxed font-light opacity-90">
-            "Imagine a gentle, invisible, spiraling energy field working in perfect harmony with soothing thermal heat. It penetrates deep into your body, creating a non-invasive, revitalizing effect—like a powerful, deep-tissue massage combined with a holistic energy treatment."
+            "Imagine a gentle, invisible, spiraling energy field working in perfect harmony with soothing thermal heat. It penetrates deep into your body, creating a non-invasive, revitalizing effect—like a powerful, deep-tissue massage combined with a performance recovery treatment."
           </p>
         </div>
       </section>
@@ -271,7 +271,7 @@ export default function Home() {
                 
                 <img 
                   src="/images/qi-mini.png" 
-                  alt="Dr. MAGField Qi Mini" 
+                  alt="DR MAGfield Qi Mini"
                   className="w-full h-auto drop-shadow-2xl relative z-10 transform hover:scale-105 transition-transform duration-500"
                 />
                 
@@ -293,7 +293,7 @@ export default function Home() {
             <div className="col-span-1 md:col-span-2">
               <div className="text-2xl font-bold font-serif mb-4">DR MAGfield</div>
               <p className="text-primary-foreground/70 max-w-sm">
-                Pioneering the future of holistic wellness by bridging ancient wisdom with modern technology.
+                Bridging ancient wisdom with modern performance technology — at Kelab Rahman Putra Malaysia.
               </p>
             </div>
             <div>
@@ -314,7 +314,7 @@ export default function Home() {
             </div>
           </div>
           <div className="pt-8 border-t border-white/10 text-center text-primary-foreground/50 text-sm">
-            © {new Date().getFullYear()} Dr. MAGField. All rights reserved.
+            © {new Date().getFullYear()} DR MAGfield. All rights reserved.
           </div>
         </div>
       </footer>
