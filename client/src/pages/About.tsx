@@ -52,7 +52,7 @@ export default function About() {
               DR MAGfield
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Malaysia's first golf club bio-energetic therapy lounge. Bridging ancient wisdom with modern performance technology at Kelab Rahman Putra Malaysia.
+              Malaysia's first golf club bio-energetic therapy lounge. Bridging Qi-driven performance technology with modern science at Kelab Rahman Putra Malaysia.
             </p>
           </motion.div>
         </div>
@@ -64,7 +64,7 @@ export default function About() {
           <h2 className="text-3xl font-serif text-primary mb-8">Who We Are</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
-              DR MAGfield exists at the intersection of ancient energy wisdom and modern performance technology. Founded by Dr MAGfield and Arie, we opened Malaysia's first golf club bio-energetic therapy lounge at Kelab Rahman Putra Malaysia (KRPM) — a space designed for athletes and active individuals who take their recovery as seriously as their training.
+              DR MAGfield exists at the intersection of Qi-driven performance technology and modern science. Founded by Dr MAGfield and Arie, we opened Malaysia's first golf club bio-energetic therapy lounge at Kelab Rahman Putra Malaysia (KRPM) — a space designed for athletes and active individuals who take their recovery as seriously as their training.
             </p>
             <p>
               We believe pain-free movement is a competitive edge. That recovery is not a luxury — it's part of the game. That technology should work with the body's natural rhythms, not against them.

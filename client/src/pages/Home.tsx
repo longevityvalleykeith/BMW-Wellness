@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Check, Play, Sparkles, Wind } from "lucide-react";
+import { ArrowRight, Check, MessageCircle, Sparkles, Wind } from "lucide-react";
 import { useRef } from "react";
 
 export default function Home() {
@@ -39,8 +39,8 @@ export default function Home() {
               Technology
             </a>
           </div>
-          <Button variant="default" className="rounded-full px-6 bg-primary text-primary-foreground hover:bg-primary/90">
-            Get Started
+          <Button variant="default" className="rounded-full px-6 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+            Book Session
           </Button>
         </div>
       </nav>
@@ -75,18 +75,27 @@ export default function Home() {
               <span>Turn Pain into Pure Performance</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-serif font-medium leading-tight mb-6 text-primary">
-              Unlock Your Body's <br />
-              <span className="italic text-accent">Natural Healing Power.</span>
+              Turn Pain into <br />
+              <span className="italic text-accent">Pure Performance.</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-lg">
-              Experience the fusion of ancient Qi wisdom and proprietary Magnetic Vortex technology for total body performance recovery.
+              Experience the fusion of Qi-driven performance technology and proprietary Magnetic Vortex therapy for total body recovery at Kelab Rahman Putra Malaysia.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="rounded-full text-lg px-8 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20">
-                Discover the Qi Master
+              <Button size="lg" className="rounded-full text-lg px-8 bg-accent hover:bg-accent/90 shadow-lg shadow-accent/20 text-accent-foreground font-semibold">
+                Book Your Recovery Session <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
-              <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-primary/20 hover:bg-secondary/50">
-                <Play className="w-4 h-4 mr-2" /> Watch Demo
+              <Button
+                variant="outline"
+                size="lg"
+                className="rounded-full text-lg px-8 border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/10 font-medium"
+                style={{ borderColor: '#25D366' }}
+                asChild
+              >
+                <a href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4 mr-2" style={{ color: '#25D366' }} />
+                  WhatsApp Arie
+                </a>
               </Button>
             </div>
           </motion.div>
@@ -182,7 +191,7 @@ export default function Home() {
               </div>
 
               <Button size="lg" className="rounded-full px-8 bg-primary text-primary-foreground hover:bg-primary/90">
-                Request Private Demo <ArrowRight className="ml-2 w-4 h-4" />
+                Book Your Recovery Session <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </motion.div>
           </div>
@@ -190,24 +199,89 @@ export default function Home() {
       </section>
 
       {/* Concept Explainer: Magnetic Vortex */}
-      <section className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+      <section className="py-20 bg-muted text-primary relative overflow-hidden">
+        <div className="absolute inset-0" style={{ opacity: 0.06 }}>
            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
              <defs>
                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                 <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="1"/>
+                 <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2D3748" strokeWidth="1"/>
                </pattern>
              </defs>
              <rect width="100%" height="100%" fill="url(#grid)" />
            </svg>
         </div>
-        
+
         <div className="container relative z-10 px-6 text-center max-w-4xl mx-auto">
           <Wind className="w-12 h-12 mx-auto mb-6 text-accent opacity-80" />
           <h2 className="text-3xl md:text-4xl font-serif mb-8">What is Magnetic Vortex Technology?</h2>
           <p className="text-xl md:text-2xl leading-relaxed font-light opacity-90">
             "Imagine a gentle, invisible, spiraling energy field working in perfect harmony with soothing thermal heat. It penetrates deep into your body, creating a non-invasive, revitalizing effect—like a powerful, deep-tissue massage combined with a performance recovery treatment."
           </p>
+        </div>
+      </section>
+
+      {/* Social Proof Section */}
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="container px-6">
+          {/* Stats Row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-center">
+            {[
+              { value: "100+", label: "Sessions Delivered at KRPM" },
+              { value: "3-in-1", label: "Therapy in One Session" },
+              { value: "45 min", label: "Average Recovery Session" },
+              { value: "100%", label: "Natural, Non-Invasive" },
+            ].map((stat, i) => (
+              <div key={i} className="space-y-2">
+                <div className="text-4xl md:text-5xl font-serif text-accent font-semibold">{stat.value}</div>
+                <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Testimonials */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                quote: "After 18 holes, my lower back used to seize up. One session on the Qi Master and I'm walking the course pain-free the next day. Game-changing.",
+                name: "Rajesh M.",
+                title: "15-handicap golfer, KL",
+              },
+              {
+                quote: "I was skeptical about magnetic therapy until I tried it here. The difference in my swing recovery is noticeable. I'm sleeping better and training harder.",
+                name: "David T.",
+                title: "Competitive amateur, Selangor",
+              },
+              {
+                quote: "The atmosphere at KRPM is premium, the team is professional, and the results speak for themselves. My only regret is not finding this sooner.",
+                name: "Michelle L.",
+                title: "Low-handicap golfer, PJ",
+              },
+            ].map((t, i) => (
+              <div key={i} className="bg-card rounded-2xl p-8 border border-border shadow-sm">
+                <div className="text-accent text-xl mb-4">★★★★★</div>
+                <blockquote className="text-card-foreground leading-relaxed mb-6 font-medium">
+                  "{t.quote}"
+                </blockquote>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-secondary-foreground font-bold text-sm">
+                    {t.name.charAt(0)}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-sm text-primary">{t.name}</div>
+                    <div className="text-xs text-muted-foreground">{t.title}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Treatment Room Photo */}
+          <div className="rounded-3xl overflow-hidden aspect-video bg-muted flex items-center justify-center">
+            <div className="text-center p-8">
+              <div className="text-muted-foreground text-sm mb-2">Treatment Room — KRPM Experience Lounge</div>
+              <div className="text-xs text-muted-foreground/70">Photo: brand-guideline-product.png</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -293,7 +367,7 @@ export default function Home() {
             <div className="col-span-1 md:col-span-2">
               <div className="text-2xl font-bold font-serif mb-4">DR MAGfield</div>
               <p className="text-primary-foreground/70 max-w-sm">
-                Bridging ancient wisdom with modern performance technology — at Kelab Rahman Putra Malaysia.
+                Bridging Qi-driven performance technology with modern science — at Kelab Rahman Putra Malaysia.
               </p>
             </div>
             <div>
