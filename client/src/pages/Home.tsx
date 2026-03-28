@@ -26,7 +26,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold font-serif text-primary tracking-wide">
-            DR. MAGField
+            DR MAGfield
           </div>
           <div className="hidden md:flex space-x-8 text-sm font-medium text-muted-foreground">
             <a href="#qi-master" className="hover:text-primary transition-colors">
@@ -291,7 +291,7 @@ export default function Home() {
         <div className="container px-6">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="col-span-1 md:col-span-2">
-              <div className="text-2xl font-bold font-serif mb-4">DR. MAGField</div>
+              <div className="text-2xl font-bold font-serif mb-4">DR MAGfield</div>
               <p className="text-primary-foreground/70 max-w-sm">
                 Pioneering the future of holistic wellness by bridging ancient wisdom with modern technology.
               </p>
