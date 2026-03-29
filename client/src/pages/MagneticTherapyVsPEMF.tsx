@@ -24,7 +24,7 @@ export default function MagneticTherapyVsPEMF() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold font-serif text-primary tracking-wide">DR MAGfield</a>
+          <a href="/" className="text-2xl font-bold font-bold text-primary tracking-wide">DR MAGfield</a>
           <div className="hidden md:flex space-x-8 text-sm font-medium text-muted-foreground">
             <a href="/#qi-master" className="hover:text-primary transition-colors">The Qi Master</a>
             <a href="/#qi-mini" className="hover:text-primary transition-colors">The Qi Mini</a>
@@ -45,7 +45,7 @@ export default function MagneticTherapyVsPEMF() {
               <Cpu className="w-4 h-4 text-accent" />
               <span>Technology Comparison</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-serif text-primary mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
               Magnetic Therapy vs PEMF for Athletes
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
@@ -58,7 +58,7 @@ export default function MagneticTherapyVsPEMF() {
       {/* Comparison Table */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-serif text-primary mb-8 text-center">Quick Comparison</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8 text-center">Quick Comparison</h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -96,7 +96,7 @@ export default function MagneticTherapyVsPEMF() {
       {/* How PEMF Works */}
       <section className="py-20 px-6 bg-secondary/10">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-serif text-primary mb-6">How PEMF Works</h2>
+          <h2 className="text-3xl font-bold text-primary mb-6">How PEMF Works</h2>
           <p className="text-lg text-muted-foreground mb-6">
             PEMF delivers electromagnetic pulses at specific frequencies through coils or pads placed on the body. The pulsed nature of the field creates varying biological effects depending on frequency, intensity, and waveform.
           </p>
@@ -117,7 +117,7 @@ export default function MagneticTherapyVsPEMF() {
       {/* How 旋磁疗法 Works */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-serif text-primary mb-6">How Rotational Magnetic Therapy Works</h2>
+          <h2 className="text-3xl font-bold text-primary mb-6">How Rotational Magnetic Therapy Works</h2>
           <p className="text-lg text-muted-foreground mb-6">
             Rotational Magnetic Therapy (developed by Professor Wang Shijie) generates a continuously rotating magnetic field rather than pulsed waves. The rotation creates a more uniform penetration pattern, theoretically providing consistent coverage across the treatment area.
           </p>
@@ -150,11 +150,11 @@ export default function MagneticTherapyVsPEMF() {
       {/* Which Is Better for Golfers */}
       <section className="py-20 px-6 bg-primary/5">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-serif text-primary mb-6 text-center">Which Is Better for Golfers?</h2>
+          <h2 className="text-3xl font-bold text-primary mb-6 text-center">Which Is Better for Golfers?</h2>
           <div className="space-y-6">
             <Card className="bg-white/80">
               <CardContent className="p-6">
-                <h3 className="font-serif text-primary text-xl mb-3">For golfers specifically:</h3>
+                <h3 className="font-bold text-primary text-xl mb-3">For golfers specifically:</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li><strong>Back and spine focus:</strong> Golfers frequently experience lower back strain. The full-length therapy bed format allows comprehensive spinal coverage.</li>
                   <li><strong>Pre-round preparation:</strong> 30-minute sessions before a round may support mobility and circulation.</li>
@@ -165,7 +165,7 @@ export default function MagneticTherapyVsPEMF() {
             </Card>
             <Card className="bg-white/80">
               <CardContent className="p-6">
-                <h3 className="font-serif text-primary text-xl mb-3">For general athletes:</h3>
+                <h3 className="font-bold text-primary text-xl mb-3">For general athletes:</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>PEMF may be preferable for targeted post-injury recovery</li>
                   <li>Rotational magnetic therapy may support general maintenance and recovery cycles</li>
@@ -180,22 +180,22 @@ export default function MagneticTherapyVsPEMF() {
       {/* FAQ */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-serif text-primary mb-8">Common Questions</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8">Common Questions</h2>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">Is one better than the other?</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-bold text-primary">Is one better than the other?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 Both modalities represent legitimate non-invasive recovery technologies. The choice depends on your goals. Neither is "better" in absolute terms — it depends on whether you prioritize clinical rehabilitation (PEMF) or performance optimization (rotational magnetic therapy).
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">Can I use both?</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-bold text-primary">Can I use both?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 Yes — many athletes use both modalities. Use PEMF for targeted post-injury recovery and rotational magnetic therapy for general maintenance and performance support. Consult your healthcare provider to create a protocol that works for your situation.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">Which is available at DR MAGfield?</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-bold text-primary">Which is available at DR MAGfield?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 DR MAGfield offers rotational magnetic therapy (3-in-1: magnetic field + heat + vibration) at our Experience Lounge in Kelab Rahman Putra Malaysia. We specialize in performance-focused recovery — athletes, golfers, and active individuals who want to train harder and recover faster.
               </AccordionContent>
@@ -207,7 +207,7 @@ export default function MagneticTherapyVsPEMF() {
       {/* Bottom Line */}
       <section className="py-20 px-6 bg-accent text-accent-foreground">
         <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-serif mb-6">The Bottom Line</h2>
+          <h2 className="text-3xl font-bold mb-6">The Bottom Line</h2>
           <div className="space-y-6 text-lg">
             <p><strong>Choose Rotational Magnetic Therapy</strong> if you want an integrated 3-in-1 experience, prefer a performance positioning over medical framing, and value the spa-like lounge environment.</p>
             <p><strong>Choose PEMF</strong> if you have specific clinical needs (bone healing, post-surgical recovery), prefer more widely available options, or want a device you can use at home.</p>

@@ -25,7 +25,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold font-serif text-primary tracking-wide">
+          <div className="text-2xl font-bold font-bold text-primary tracking-wide">
             DR MAGfield
           </div>
           <div className="hidden md:flex space-x-8 text-sm font-medium text-muted-foreground">
@@ -74,9 +74,9 @@ export default function Home() {
               <Sparkles className="w-4 h-4 text-accent" />
               <span>Turn Pain into Pure Performance</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-serif font-medium leading-tight mb-6 text-primary">
-              Turn Pain into <br />
-              <span className="italic text-accent">Pure Performance.</span>
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 text-primary tracking-tight">
+              Turn Pain into<br />
+              <span className="text-accent">Pure Performance.</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-lg">
               Experience the fusion of Qi-driven performance technology and proprietary Magnetic Vortex therapy for total body recovery at Kelab Rahman Putra Malaysia.
@@ -149,7 +149,7 @@ export default function Home() {
                 transition={{ delay: 0.3, duration: 0.5 }}
                 className="absolute -bottom-6 -right-6 md:bottom-10 md:-right-10 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-white/50 max-w-xs"
               >
-                <h4 className="font-serif text-xl text-primary mb-2">Magnetic Vortex</h4>
+                <h4 className="font-bold text-xl text-primary mb-2">Magnetic Vortex</h4>
                 <p className="text-sm text-muted-foreground">Proprietary technology that penetrates deep to restore natural energy flow.</p>
               </motion.div>
             </motion.div>
@@ -161,7 +161,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <span className="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">The Flagship</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
                 The Qi Master: <br />
                 <span className="italic text-muted-foreground">Recharge Your Core.</span>
               </h2>
@@ -213,7 +213,7 @@ export default function Home() {
 
         <div className="container relative z-10 px-6 text-center max-w-4xl mx-auto">
           <Wind className="w-12 h-12 mx-auto mb-6 text-accent opacity-80" />
-          <h2 className="text-3xl md:text-4xl font-serif mb-8">What is Magnetic Vortex Technology?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">What is Magnetic Vortex Technology?</h2>
           <p className="text-xl md:text-2xl leading-relaxed font-light opacity-90">
             "Imagine a gentle, invisible, spiraling energy field working in perfect harmony with soothing thermal heat. It penetrates deep into your body, creating a non-invasive, revitalizing effect—like a powerful, deep-tissue massage combined with a performance recovery treatment."
           </p>
@@ -232,7 +232,7 @@ export default function Home() {
               { value: "100%", label: "Natural, Non-Invasive" },
             ].map((stat, i) => (
               <div key={i} className="space-y-2">
-                <div className="text-4xl md:text-5xl font-serif text-accent font-semibold">{stat.value}</div>
+                <div className="text-4xl md:text-5xl font-bold text-accent font-semibold">{stat.value}</div>
                 <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
               </div>
             ))}
@@ -285,6 +285,86 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 bg-muted relative">
+        <div className="container px-6">
+          <div className="text-center mb-16">
+            <span className="text-accent font-bold tracking-widest uppercase text-sm mb-3 block">Recovery Plans</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Choose Your Recovery Plan</h2>
+            <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+              Flexible options for every golfer — from single sessions to monthly membership.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Single Session */}
+            <div className="bg-card rounded-2xl p-8 border border-border shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">Single Session</div>
+              <div className="text-4xl font-bold text-primary mb-1">RM 150</div>
+              <div className="text-sm text-muted-foreground mb-8">per 45-min session</div>
+              <ul className="space-y-3 mb-8">
+                {["Full Qi Master bed session", "Rotational magnetic therapy", "Thermal + vibration", "Post-session recovery tips"].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm">
+                    <Check className="w-4 h-4 text-accent mt-0.5 shrink-0" />
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button variant="outline" className="w-full rounded-full border-primary/30 text-primary hover:bg-primary/5">
+                Book Single Session
+              </Button>
+            </div>
+
+            {/* Monthly Plan */}
+            <div className="bg-card rounded-2xl p-8 border-2 border-accent shadow-lg relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-xs font-bold px-4 py-1 rounded-full">
+                MOST POPULAR
+              </div>
+              <div className="text-sm font-semibold text-accent uppercase tracking-wide mb-4">Monthly Plan</div>
+              <div className="text-4xl font-bold text-primary mb-1">RM 450</div>
+              <div className="text-sm text-muted-foreground mb-8">4 sessions per month</div>
+              <ul className="space-y-3 mb-8">
+                {["4 x Qi Master sessions", "Priority booking at KRPM", "Personalized recovery tracking", "WhatsApp support with Arie", "Free recovery assessment"].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm">
+                    <Check className="w-4 h-4 text-accent mt-0.5 shrink-0" />
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button className="w-full rounded-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                Start Monthly Plan <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </div>
+
+            {/* Annual Membership */}
+            <div className="bg-card rounded-2xl p-8 border border-border shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">Annual Member</div>
+              <div className="text-4xl font-bold text-primary mb-1">RM 3,600</div>
+              <div className="text-sm text-muted-foreground mb-8">48 sessions over 12 months</div>
+              <ul className="space-y-3 mb-8">
+                {["48 Qi Master sessions", "Unlimited priority booking", "Free guest passes (4/year)", "Dedicated locker at KRPM", "Annual performance review", "Earliest access to new therapies"].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm">
+                    <Check className="w-4 h-4 text-accent mt-0.5 shrink-0" />
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button variant="outline" className="w-full rounded-full border-primary/30 text-primary hover:bg-primary/5">
+                Become a Member
+              </Button>
+            </div>
+          </div>
+
+          <p className="text-center text-sm text-muted-foreground mt-10">
+            All sessions at Kelab Rahman Putra Malaysia.{" "}
+            <a href="https://wa.me/60123456789" className="text-accent underline hover:no-underline">
+              WhatsApp Arie
+            </a>{" "}
+            to arrange your first session.
+          </p>
+        </div>
+      </section>
+
       {/* Product 2: Qi Mini */}
       <section id="qi-mini" className="py-24 md:py-32 relative">
         <div className="container px-6">
@@ -297,7 +377,7 @@ export default function Home() {
               className="order-2 md:order-1"
             >
               <span className="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">Compact Power</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
                 The Qi Mini: <br />
                 <span className="italic text-muted-foreground">Foundation of Vitality.</span>
               </h2>
@@ -308,19 +388,19 @@ export default function Home() {
 
               <Accordion type="single" collapsible className="w-full mb-8">
                 <AccordionItem value="item-1" className="border-b-border/50">
-                  <AccordionTrigger className="text-lg font-serif text-primary">The Hidden Powerhouse</AccordionTrigger>
+                  <AccordionTrigger className="text-lg font-bold text-primary">The Hidden Powerhouse</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
                     Weakness in your pelvic floor can lead to instability and energy drops. The Qi Mini targets this foundational area to restore balance from the bottom up.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2" className="border-b-border/50">
-                  <AccordionTrigger className="text-lg font-serif text-primary">Effortless Core Workout</AccordionTrigger>
+                  <AccordionTrigger className="text-lg font-bold text-primary">Effortless Core Workout</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
                     Just sit and let the Qi Mini do the work. The circulating stimulation helps to tone and strengthen the muscles that support your spine and internal organs.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3" className="border-b-border/50">
-                  <AccordionTrigger className="text-lg font-serif text-primary">Boost Your Energy (Qi)</AccordionTrigger>
+                  <AccordionTrigger className="text-lg font-bold text-primary">Boost Your Energy (Qi)</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
                     By improving circulation and strengthening your core foundation, the Qi Mini helps unblock and boost your body's central energy flow.
                   </AccordionContent>
@@ -365,7 +445,7 @@ export default function Home() {
         <div className="container px-6">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="col-span-1 md:col-span-2">
-              <div className="text-2xl font-bold font-serif mb-4">DR MAGfield</div>
+              <div className="text-2xl font-bold font-bold mb-4">DR MAGfield</div>
               <p className="text-primary-foreground/70 max-w-sm">
                 Bridging Qi-driven performance technology with modern science — at Kelab Rahman Putra Malaysia.
               </p>

@@ -76,7 +76,7 @@ export default function RotationalMagneticTherapy() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold font-serif text-primary tracking-wide">DR MAGfield</a>
+          <a href="/" className="text-2xl font-bold font-bold text-primary tracking-wide">DR MAGfield</a>
           <div className="hidden md:flex space-x-8 text-sm font-medium text-muted-foreground">
             <a href="/#qi-master" className="hover:text-primary transition-colors">The Qi Master</a>
             <a href="/#qi-mini" className="hover:text-primary transition-colors">The Qi Mini</a>
@@ -101,7 +101,7 @@ export default function RotationalMagneticTherapy() {
               <Cpu className="w-4 h-4 text-accent" />
               <span>旋磁疗法 — Rotational Magnetic Therapy</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-serif text-primary mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
               What is Rotational Magnetic Therapy (旋磁疗法)?
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
@@ -122,7 +122,7 @@ export default function RotationalMagneticTherapy() {
       {/* What is 旋磁疗法 */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-serif text-primary mb-6">How It Works</h2>
+          <h2 className="text-3xl font-bold text-primary mb-6">How It Works</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
               Rotational Magnetic Therapy (旋磁疗法, pronounced "xuán cí liáo fǎ") generates a continuously rotating magnetic field — rather than static or pulsed waves — that interacts with cellular membranes and ion channels.
@@ -159,7 +159,7 @@ export default function RotationalMagneticTherapy() {
                   <Cpu className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-serif text-primary mb-2">Professor Wang Shijie</h3>
+                  <h3 className="text-xl font-bold text-primary mb-2">Professor Wang Shijie</h3>
                   <p className="text-sm text-accent font-medium mb-3">Inventor, Rotational Magnetic Therapy Technology</p>
                   <p className="text-muted-foreground">
                     Professor Wang Shijie developed rotational magnetic therapy with a specific goal: help the body recover its natural energy balance through magnetic field rotation. His research established new protocols for non-invasive recovery enhancement, focusing on athletes and active individuals who push their bodies and need to recover just as hard.
@@ -174,7 +174,7 @@ export default function RotationalMagneticTherapy() {
       {/* PEMF Comparison */}
       <section ref={comparisonRef} className="py-20 px-6" id="comparison">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-serif text-primary mb-8 text-center">Rotational Magnetic Therapy vs PEMF</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8 text-center">Rotational Magnetic Therapy vs PEMF</h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -212,34 +212,34 @@ export default function RotationalMagneticTherapy() {
       {/* FAQ */}
       <section className="py-20 px-6 bg-secondary/10">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-serif text-primary mb-8 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8 text-center">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">What is rotational magnetic therapy (旋磁疗法)?</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-bold text-primary">What is rotational magnetic therapy (旋磁疗法)?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 Rotational Magnetic Therapy (旋磁疗法) is an advanced bio-energetic therapy using rotating magnetic fields, developed by Professor Wang Shijie, combining magnetic therapy with heat and vibration for enhanced recovery. The rotating field creates more uniform penetration than pulsed alternatives.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">How does it differ from PEMF?</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-bold text-primary">How does it differ from PEMF?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 Rotational magnetic therapy uses a continuous 3D rotating field while PEMF uses pulsed waves. Rotational therapy often integrates heat and vibration in a 3-in-1 system, targeting performance rather than clinical outcomes. Both are magnetic therapies but with different delivery mechanisms and applications.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">Who invented rotational magnetic therapy?</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-bold text-primary">Who invented rotational magnetic therapy?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 Professor Wang Shijie developed rotational magnetic therapy (旋磁疗法). He is the named inventor of the technology used in DR MAGfield therapy beds. His research focuses on non-invasive recovery enhancement for athletes and active individuals.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">How long is a typical session?</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-bold text-primary">How long is a typical session?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 A typical rotational magnetic therapy session lasts 30-45 minutes. No downtime is required — you can return to training or daily activities immediately after.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">Is it safe?</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-bold text-primary">Is it safe?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 Rotational magnetic therapy is a non-invasive recovery modality. It is not intended to diagnose, treat, cure, or prevent any disease. Consult a healthcare provider before beginning any new therapy regimen if you have concerns.
               </AccordionContent>
@@ -251,7 +251,7 @@ export default function RotationalMagneticTherapy() {
       {/* CTA */}
       <section className="py-20 px-6 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-serif mb-6">Experience Rotational Magnetic Therapy</h2>
+          <h2 className="text-3xl font-bold mb-6">Experience Rotational Magnetic Therapy</h2>
           <p className="text-xl opacity-90 mb-8">
             DR MAGfield — Malaysia's first golf club bio-energetic therapy lounge at Kelab Rahman Putra Malaysia.
           </p>

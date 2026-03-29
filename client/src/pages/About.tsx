@@ -30,7 +30,7 @@ export default function About() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold font-serif text-primary tracking-wide">DR MAGfield</a>
+          <a href="/" className="text-2xl font-bold font-bold text-primary tracking-wide">DR MAGfield</a>
           <div className="hidden md:flex space-x-8 text-sm font-medium text-muted-foreground">
             <a href="/#qi-master" className="hover:text-primary transition-colors">The Qi Master</a>
             <a href="/#qi-mini" className="hover:text-primary transition-colors">The Qi Mini</a>
@@ -48,7 +48,7 @@ export default function About() {
         <div className="container mx-auto max-w-4xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="text-accent font-bold tracking-widest uppercase text-sm mb-4 block">About</span>
-            <h1 className="text-4xl md:text-5xl font-serif text-primary mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
               DR MAGfield
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
@@ -61,7 +61,7 @@ export default function About() {
       {/* Who We Are */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-serif text-primary mb-8">Who We Are</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8">Who We Are</h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
             <p>
               DR MAGfield exists at the intersection of Qi-driven performance technology and modern science. Founded by Dr MAGfield and Arie, we opened Malaysia's first golf club bio-energetic therapy lounge at Kelab Rahman Putra Malaysia (KRPM) — a space designed for athletes and active individuals who take their recovery as seriously as their training.
@@ -79,7 +79,7 @@ export default function About() {
       {/* Professor Wang Shijie */}
       <section className="py-20 px-6 bg-secondary/10">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-serif text-primary mb-8">Our Technology</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8">Our Technology</h2>
           <Card className="bg-white/80 backdrop-blur-sm">
             <CardContent className="p-8">
               <div className="flex items-start gap-6">
@@ -87,7 +87,7 @@ export default function About() {
                   <Cpu className="w-10 h-10 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-serif text-primary mb-2">Professor Wang Shijie</h3>
+                  <h3 className="text-2xl font-bold text-primary mb-2">Professor Wang Shijie</h3>
                   <p className="text-accent font-medium mb-4">Inventor, Rotational Magnetic Therapy (旋磁疗法)</p>
                   <div className="prose prose-sm text-muted-foreground space-y-3">
                     <p>
@@ -113,14 +113,14 @@ export default function About() {
       {/* Location */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-serif text-primary mb-8">Where to Find Us</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8">Where to Find Us</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="bg-white/80">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-serif text-primary text-lg mb-2">Experience Lounge</h3>
+                    <h3 className="font-bold text-primary text-lg mb-2">Experience Lounge</h3>
                     <p className="text-muted-foreground">
                       Kelab Rahman Putra Malaysia (KRPM)<br />
                       Kuala Lumpur, Malaysia
@@ -137,7 +137,7 @@ export default function About() {
                 <div className="flex items-start gap-4">
                   <Users className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-serif text-primary text-lg mb-2">Who We Serve</h3>
+                    <h3 className="font-bold text-primary text-lg mb-2">Who We Serve</h3>
                     <p className="text-muted-foreground">
                       Athletes, golfers, and active individuals who want to perform at their best. Performance over medical. Pain-free movement is your competitive edge.
                     </p>
@@ -152,7 +152,7 @@ export default function About() {
       {/* Brand Values */}
       <section className="py-20 px-6 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-serif mb-8">What We Stand For</h2>
+          <h2 className="text-3xl font-bold mb-8">What We Stand For</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { icon: <Cpu className="w-8 h-8" />, title: "Technology With Purpose", desc: "Every technology we use must genuinely support human performance — not just generate claims." },
@@ -163,7 +163,7 @@ export default function About() {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/20 mb-4 mx-auto">
                   <div className="text-accent">{item.icon}</div>
                 </div>
-                <h3 className="font-serif text-xl mb-2">{item.title}</h3>
+                <h3 className="font-bold text-xl mb-2">{item.title}</h3>
                 <p className="text-primary-foreground/80 text-sm">{item.desc}</p>
               </div>
             ))}
@@ -174,7 +174,7 @@ export default function About() {
       {/* CTA */}
       <section className="py-20 px-6 bg-accent text-accent-foreground">
         <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-serif mb-6">Experience the Difference</h2>
+          <h2 className="text-3xl font-bold mb-6">Experience the Difference</h2>
           <p className="text-xl opacity-90 mb-8">
             Book your first rotational magnetic therapy session at DR MAGfield, Kelab Rahman Putra Malaysia.
           </p>

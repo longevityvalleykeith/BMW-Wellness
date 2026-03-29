@@ -86,7 +86,7 @@ export default function GolfRecoveryFAQ() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold font-serif text-primary tracking-wide">DR MAGfield</a>
+          <a href="/" className="text-2xl font-bold font-bold text-primary tracking-wide">DR MAGfield</a>
           <div className="hidden md:flex space-x-8 text-sm font-medium text-muted-foreground">
             <a href="/#qi-master" className="hover:text-primary transition-colors">The Qi Master</a>
             <a href="/#qi-mini" className="hover:text-primary transition-colors">The Qi Mini</a>
@@ -111,7 +111,7 @@ export default function GolfRecoveryFAQ() {
               <Flag className="w-4 h-4 text-accent" />
               <span>Golf-Specific Recovery</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-serif text-primary mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
               Golf Recovery Technology
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8">
@@ -146,10 +146,10 @@ export default function GolfRecoveryFAQ() {
       {/* Main FAQ */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-serif text-primary mb-8">Golf Recovery FAQ</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8">Golf Recovery FAQ</h2>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">
+              <AccordionTrigger className="text-lg font-bold text-primary">
                 What technology do pro golfers use for recovery?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
@@ -157,7 +157,7 @@ export default function GolfRecoveryFAQ() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">
+              <AccordionTrigger className="text-lg font-bold text-primary">
                 How often should golfers do recovery therapy?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
@@ -165,7 +165,7 @@ export default function GolfRecoveryFAQ() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">
+              <AccordionTrigger className="text-lg font-bold text-primary">
                 Best recovery therapy for golfers with back pain?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
@@ -173,7 +173,7 @@ export default function GolfRecoveryFAQ() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">
+              <AccordionTrigger className="text-lg font-bold text-primary">
                 What is 旋磁疗法 and how does it help golfers?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
@@ -181,7 +181,7 @@ export default function GolfRecoveryFAQ() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">
+              <AccordionTrigger className="text-lg font-bold text-primary">
                 How long does recovery therapy take before a round?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
@@ -189,7 +189,7 @@ export default function GolfRecoveryFAQ() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-6" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">
+              <AccordionTrigger className="text-lg font-bold text-primary">
                 Can I use recovery technology before and after golf?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
@@ -197,7 +197,7 @@ export default function GolfRecoveryFAQ() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-7" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">
+              <AccordionTrigger className="text-lg font-bold text-primary">
                 How does DR MAGfield's therapy differ from a massage?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
@@ -205,7 +205,7 @@ export default function GolfRecoveryFAQ() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-8" className="border-b-border">
-              <AccordionTrigger className="text-lg font-serif text-primary">
+              <AccordionTrigger className="text-lg font-bold text-primary">
                 Is magnetic therapy allowed in professional golf?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
@@ -219,7 +219,7 @@ export default function GolfRecoveryFAQ() {
       {/* Recovery Schedule */}
       <section className="py-20 px-6 bg-secondary/10">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-serif text-primary mb-8 text-center">Sample Golf Week Recovery Schedule</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8 text-center">Sample Golf Week Recovery Schedule</h2>
           <div className="grid md:grid-cols-7 gap-4">
             {[
               { day: "Mon", session: "Rest", icon: "😴" },
@@ -248,7 +248,7 @@ export default function GolfRecoveryFAQ() {
       {/* CTA */}
       <section className="py-20 px-6 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-serif mb-6">Ready to Recover Smarter?</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Recover Smarter?</h2>
           <p className="text-xl opacity-90 mb-8">
             Experience rotational magnetic therapy at Malaysia's first golf club bio-energetic therapy lounge.
           </p>
