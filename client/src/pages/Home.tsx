@@ -92,7 +92,7 @@ export default function Home() {
                 style={{ borderColor: '#25D366' }}
                 asChild
               >
-                <a href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/60126595319" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-4 h-4 mr-2" style={{ color: '#25D366' }} />
                   WhatsApp Arie
                 </a>
@@ -357,7 +357,7 @@ export default function Home() {
 
           <p className="text-center text-sm text-muted-foreground mt-10">
             All sessions at Kelab Rahman Putra Malaysia.{" "}
-            <a href="https://wa.me/60123456789" className="text-accent underline hover:no-underline">
+            <a href="https://wa.me/60126595319" className="text-accent underline hover:no-underline">
               WhatsApp Arie
             </a>{" "}
             to arrange your first session.
