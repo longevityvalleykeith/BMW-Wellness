@@ -47,20 +47,16 @@ export default function Home() {
 
       {/* Hero Section */}
       <section ref={targetRef} className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
-        <motion.div 
+        <motion.div
           style={{ opacity, scale }}
           className="absolute inset-0 z-0"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
+          <img
+            src="https://wlwzfjlvwaosonorsvyf.supabase.co/storage/v1/object/public/media-uploads/reference-assets/dr-magfield/canon-qi-master-krpm-real.jpg"
+            alt="DR MAGfield Qi Master at Kelab Rahman Putra Malaysia"
             className="w-full h-full object-cover"
-          >
-            <source src="/images/hero-video.mp4" type="video/mp4" />
-          </video>
+          />
         </motion.div>
 
         <div className="container relative z-20 px-6 grid md:grid-cols-2 gap-12 items-center">
