@@ -1,14 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Check, MessageCircle, Sparkles, Wind } from "lucide-react";
+import { ArrowRight, Check, MessageCircle, Sparkles, Zap, Users, Heart, Shield, Send } from "lucide-react";
 import { useRef } from "react";
+
+// BMW Wellness Supabase asset URLs
+const BMW_ASSETS = {
+  heroImage: "https://wlwzfjlvwaosonorsvyf.supabase.co/storage/v1/object/public/brand-assets/bmw-wellness/bmw-experience-1.jpg",
+  experience2: "https://wlwzfjlvwaosonorsvyf.supabase.co/storage/v1/object/public/brand-assets/bmw-wellness/bmw-experience-2.jpg",
+  experience3: "https://wlwzfjlvwaosonorsvyf.supabase.co/storage/v1/object/public/brand-assets/bmw-wellness/bmw-experience-3.jpg",
+  logo: "https://wlwzfjlvwaosonorsvyf.supabase.co/storage/v1/object/public/brand-assets/bmw-wellness/logo.png",
+};
+
+// WhatsApp click-to-chat link
+const WHATSAPP_LINK = "https://wa.me/601170321128?text=Hi%20Amanda,%20I%20am%20interested%20in%20BMW%20Wellness%20and%20would%20like%20to%20book%20a%20session.";
+const TELEGRAM_LINK = "https://t.me/BMW_Wellness_Bot";
 
 export default function Home() {
   const targetRef = useRef<HTMLDivElement>(null);
@@ -25,22 +31,34 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold font-bold text-primary tracking-wide">
-            DR MAGfield
+          <div className="flex items-center gap-3">
+            <img src={BMW_ASSETS.logo} alt="BMW Wellness" className="h-10 w-auto" />
+            <div className="text-xl font-bold text-primary tracking-wide">
+              BMW Wellness
+            </div>
           </div>
           <div className="hidden md:flex space-x-8 text-sm font-medium text-muted-foreground">
-            <a href="#qi-master" className="hover:text-primary transition-colors">
-              The Qi Master
+            <a href="#capsule" className="hover:text-accent transition-colors">
+              12-in-1 Capsule
             </a>
-            <a href="#qi-mini" className="hover:text-primary transition-colors">
-              The Qi Mini
+            <a href="#services" className="hover:text-accent transition-colors">
+              Services
             </a>
-            <a href="#technology" className="hover:text-primary transition-colors">
-              Technology
+            <a href="#about" className="hover:text-accent transition-colors">
+              About
+            </a>
+            <a href="#contact" className="hover:text-accent transition-colors">
+              Contact
             </a>
           </div>
-          <Button variant="default" className="rounded-full px-6 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-            Book Session
+          <Button
+            variant="default"
+            className="rounded-full px-6 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
+            asChild
+          >
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              Book Session
+            </a>
           </Button>
         </div>
       </nav>
@@ -53,10 +71,12 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
           <img
-            src="https://wlwzfjlvwaosonorsvyf.supabase.co/storage/v1/object/public/media-uploads/reference-assets/dr-magfield/canon-qi-master-krpm-real.jpg"
-            alt="DR MAGfield Qi Master at Kelab Rahman Putra Malaysia"
+            src={BMW_ASSETS.heroImage}
+            alt="BMW Wellness 12-in-1 Bio-Physics Energy Capsule Chamber"
             className="w-full h-full object-cover"
           />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-primary/60 z-5" />
         </motion.div>
 
         <div className="container relative z-20 px-6 grid md:grid-cols-2 gap-12 items-center">
@@ -66,54 +86,59 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-2xl"
           >
-            <div className="inline-flex items-center space-x-2 bg-secondary/50 backdrop-blur-sm px-4 py-2 rounded-full text-secondary-foreground text-sm font-medium mb-6 border border-secondary">
-              <Sparkles className="w-4 h-4 text-accent" />
-              <span>Turn Pain into Pure Performance</span>
+            <div className="inline-flex items-center space-x-2 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full text-accent text-sm font-medium mb-6 border border-accent/30">
+              <Sparkles className="w-4 h-4" />
+              <span>For Seniors Who Want to Feel Younger</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 text-primary tracking-tight">
-              Turn Pain into<br />
-              <span className="text-accent">Pure Performance.</span>
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-primary-foreground tracking-tight">
+              Restore Your Energy.<br />
+              <span className="text-secondary">Ease Your Pain.</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-lg">
-              Experience the fusion of Qi-driven performance technology and proprietary Magnetic Vortex therapy for total body recovery at Kelab Rahman Putra Malaysia.
+            <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed max-w-lg">
+              The 12-in-1 Bio-Physics Energy Capsule Chamber — designed for seniors who want to feel younger, reduce chronic pain, and reclaim their vitality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="rounded-full text-lg px-8 bg-accent hover:bg-accent/90 shadow-lg shadow-accent/20 text-accent-foreground font-semibold">
-                Book Your Recovery Session <ArrowRight className="ml-2 w-4 h-4" />
+              <Button
+                size="lg"
+                className="rounded-full text-lg px-8 bg-accent hover:bg-accent/90 shadow-lg shadow-accent/20 text-accent-foreground font-semibold"
+                asChild
+              >
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                  Experience the Capsule <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="rounded-full text-lg px-8 border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/10 font-medium"
-                style={{ borderColor: '#25D366' }}
+                className="rounded-full text-lg px-8 border-secondary/40 text-secondary hover:bg-secondary/10 font-medium bg-transparent"
                 asChild
               >
-                <a href="https://wa.me/60126595319" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-4 h-4 mr-2" style={{ color: '#25D366' }} />
-                  WhatsApp Arie
+                <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+                  <Send className="w-4 h-4 mr-2" />
+                  Chat with BMW AI
                 </a>
               </Button>
             </div>
           </motion.div>
         </div>
-        
+
         {/* Scroll Indicator */}
-        <motion.div 
+        <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-primary-foreground/50"
         >
-          <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center p-1">
-            <div className="w-1 h-2 bg-muted-foreground/50 rounded-full" />
+          <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex justify-center p-1">
+            <div className="w-1 h-2 bg-primary-foreground/50 rounded-full" />
           </div>
         </motion.div>
       </section>
 
-      {/* Product 1: Qi Master */}
-      <section id="qi-master" className="py-24 md:py-32 relative overflow-hidden">
+      {/* 12-in-1 Capsule Feature Section */}
+      <section id="capsule" className="py-24 md:py-32 relative overflow-hidden bg-muted">
         {/* Background Decorative Elements */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-secondary/30 -skew-x-12 translate-x-1/4 z-0" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-accent/5 -skew-x-12 translate-x-1/4 z-0" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
 
         <div className="container relative z-10 px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -125,28 +150,28 @@ export default function Home() {
               className="relative"
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20 aspect-[4/5] md:aspect-square">
-                <img 
-                  src="/images/qi-master.webp" 
-                  alt="DR MAGfield Qi Master Spinal Care Bed"
+                <img
+                  src={BMW_ASSETS.experience2}
+                  alt="BMW Wellness 12-in-1 Bio-Physics Energy Capsule Chamber"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 text-white">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                    <span className="text-sm font-medium uppercase tracking-wider">Active Thermal Therapy</span>
+                    <span className="text-sm font-medium uppercase tracking-wider">9 Advanced Technologies</span>
                   </div>
                 </div>
               </div>
               {/* Floating Feature Card */}
-              <motion.div 
+              <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
                 className="absolute -bottom-6 -right-6 md:bottom-10 md:-right-10 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-white/50 max-w-xs"
               >
-                <h4 className="font-bold text-xl text-primary mb-2">Magnetic Vortex</h4>
-                <p className="text-sm text-muted-foreground">Proprietary technology that penetrates deep to restore natural energy flow.</p>
+                <h4 className="font-bold text-xl text-primary mb-2">12-in-1 Technology</h4>
+                <p className="text-sm text-muted-foreground">Comprehensive bio-physics energy therapy in one session.</p>
               </motion.div>
             </motion.div>
 
@@ -156,213 +181,198 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <span className="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">The Flagship</span>
+              <span className="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">Flagship Technology</span>
               <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-                The Qi Master: <br />
-                <span className="italic text-muted-foreground">Recharge Your Core.</span>
+                12-in-1 Bio-Physics<br />
+                <span className="italic text-muted-foreground">Energy Capsule Chamber</span>
               </h2>
-              
+
               <div className="space-y-6 text-lg text-muted-foreground mb-8">
                 <p>
-                  Stress, poor posture, and age compress your spine, blocking your body's natural energy flow (Qi). This blockage is often the root of fatigue, pain, and poor health.
-                </p>
-                <p>
-                  More than a bed, the Qi Master is a daily performance ritual. Lie down, let the warmth melt away tension, and feel the magnetic energy driving your body back into peak alignment.
+                  Designed specifically for seniors experiencing chronic pain, low energy, or recovering from illness. Our 12-in-1 chamber combines 9 cutting-edge bio-physics technologies to restore your body&apos;s natural energy flow.
                 </p>
               </div>
 
-              <div className="space-y-4 mb-10">
+              {/* 9 Technologies Grid */}
+              <div className="grid grid-cols-3 gap-4 mb-10">
                 {[
-                  "Thermal Decompression melts muscle tension",
-                  "Restores natural posture alignment",
-                  "Awakens body's innate vitality (Qi)"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-primary">
-                      <Check className="w-3 h-3" />
-                    </div>
-                    <span className="font-medium text-foreground/80">{item}</span>
+                  { icon: Zap, name: "Magnetic Vortex" },
+                  { icon: Sparkles, name: "Negative Ions" },
+                  { icon: Shield, name: "Magnetism" },
+                  { icon: Heart, name: "Brain Wave Entrainment" },
+                  { icon: Zap, name: "Far Infrared" },
+                  { icon: Shield, name: "Jade Energy Stone" },
+                  { icon: Zap, name: "Mono Light Therapy" },
+                  { icon: Zap, name: "Graphene Conduction" },
+                  { icon: Shield, name: "Ozone Sterilization" },
+                ].map((tech, i) => (
+                  <div key={i} className="flex flex-col items-center text-center p-3 bg-card rounded-xl border border-border/50">
+                    <tech.icon className="w-6 h-6 text-accent mb-2" />
+                    <span className="text-xs font-medium text-foreground/80">{tech.name}</span>
                   </div>
                 ))}
               </div>
 
-              <Button size="lg" className="rounded-full px-8 bg-primary text-primary-foreground hover:bg-primary/90">
-                Book Your Recovery Session <ArrowRight className="ml-2 w-4 h-4" />
+              <Button
+                size="lg"
+                className="rounded-full px-8 bg-accent text-accent-foreground hover:bg-accent/90"
+                asChild
+              >
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                  Book Your Session <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
               </Button>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Concept Explainer: Magnetic Vortex */}
-      <section className="py-20 bg-muted text-primary relative overflow-hidden">
-        <div className="absolute inset-0" style={{ opacity: 0.06 }}>
-           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-             <defs>
-               <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                 <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2D3748" strokeWidth="1"/>
-               </pattern>
-             </defs>
-             <rect width="100%" height="100%" fill="url(#grid)" />
-           </svg>
+      {/* Benefits Section */}
+      <section className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0" style={{ opacity: 0.05 }}>
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="1"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
         </div>
 
-        <div className="container relative z-10 px-6 text-center max-w-4xl mx-auto">
-          <Wind className="w-12 h-12 mx-auto mb-6 text-accent opacity-80" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">What is Magnetic Vortex Technology?</h2>
-          <p className="text-xl md:text-2xl leading-relaxed font-light opacity-90">
-            "Imagine a gentle, invisible, spiraling energy field working in perfect harmony with soothing thermal heat. It penetrates deep into your body, creating a non-invasive, revitalizing effect—like a powerful, deep-tissue massage combined with a performance recovery treatment."
-          </p>
-        </div>
-      </section>
-
-      {/* Social Proof Section */}
-      <section className="py-24 bg-background relative overflow-hidden">
-        <div className="container px-6">
-          {/* Stats Row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-center">
-            {[
-              { value: "100+", label: "Sessions Delivered at KRPM" },
-              { value: "3-in-1", label: "Therapy in One Session" },
-              { value: "45 min", label: "Average Recovery Session" },
-              { value: "100%", label: "Natural, Non-Invasive" },
-            ].map((stat, i) => (
-              <div key={i} className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-accent font-semibold">{stat.value}</div>
-                <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Testimonials */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {[
-              {
-                quote: "After 18 holes, my lower back used to seize up. One session on the Qi Master and I'm walking the course pain-free the next day. Game-changing.",
-                name: "Rajesh M.",
-                title: "15-handicap golfer, KL",
-              },
-              {
-                quote: "I was skeptical about magnetic therapy until I tried it here. The difference in my swing recovery is noticeable. I'm sleeping better and training harder.",
-                name: "David T.",
-                title: "Competitive amateur, Selangor",
-              },
-              {
-                quote: "The atmosphere at KRPM is premium, the team is professional, and the results speak for themselves. My only regret is not finding this sooner.",
-                name: "Michelle L.",
-                title: "Low-handicap golfer, PJ",
-              },
-            ].map((t, i) => (
-              <div key={i} className="bg-card rounded-2xl p-8 border border-border shadow-sm">
-                <div className="text-accent text-xl mb-4">★★★★★</div>
-                <blockquote className="text-card-foreground leading-relaxed mb-6 font-medium">
-                  "{t.quote}"
-                </blockquote>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-secondary-foreground font-bold text-sm">
-                    {t.name.charAt(0)}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-sm text-primary">{t.name}</div>
-                    <div className="text-xs text-muted-foreground">{t.title}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Treatment Room Photo */}
-          <div className="rounded-3xl overflow-hidden aspect-video bg-muted flex items-center justify-center">
-            <div className="text-center p-8">
-              <div className="text-muted-foreground text-sm mb-2">Treatment Room — KRPM Experience Lounge</div>
-              <div className="text-xs text-muted-foreground/70">Photo: brand-guideline-product.png</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="py-24 bg-muted relative">
-        <div className="container px-6">
+        <div className="container relative z-10 px-6">
           <div className="text-center mb-16">
-            <span className="text-accent font-bold tracking-widest uppercase text-sm mb-3 block">Recovery Plans</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Choose Your Recovery Plan</h2>
-            <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-              Flexible options for every golfer — from single sessions to monthly membership.
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Who Benefits from the 12-in-1 Capsule?</h2>
+            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
+              Specifically designed for seniors seeking preventive wellness and natural recovery.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Single Session */}
-            <div className="bg-card rounded-2xl p-8 border border-border shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">Single Session</div>
-              <div className="text-4xl font-bold text-primary mb-1">RM 150</div>
-              <div className="text-sm text-muted-foreground mb-8">per 45-min session</div>
-              <ul className="space-y-3 mb-8">
-                {["Full Qi Master bed session", "Rotational magnetic therapy", "Thermal + vibration", "Post-session recovery tips"].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm">
-                    <Check className="w-4 h-4 text-accent mt-0.5 shrink-0" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button variant="outline" className="w-full rounded-full border-primary/30 text-primary hover:bg-primary/5">
-                Book Single Session
-              </Button>
-            </div>
-
-            {/* Monthly Plan */}
-            <div className="bg-card rounded-2xl p-8 border-2 border-accent shadow-lg relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-xs font-bold px-4 py-1 rounded-full">
-                MOST POPULAR
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            {[
+              { icon: Users, title: "Chronic Pain", desc: "Natural pain relief without medication" },
+              { icon: Zap, title: "Low Energy", desc: "Restore vitality and daily energy" },
+              { icon: Heart, title: "Post-Illness Recovery", desc: "Support your body after illness" },
+              { icon: Shield, title: "Preventive Wellness", desc: "Maintain health as you age" },
+            ].map((benefit, i) => (
+              <div key={i} className="space-y-4 p-6">
+                <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto">
+                  <benefit.icon className="w-8 h-8 text-accent" />
+                </div>
+                <h3 className="font-bold text-xl">{benefit.title}</h3>
+                <p className="text-primary-foreground/60 text-sm">{benefit.desc}</p>
               </div>
-              <div className="text-sm font-semibold text-accent uppercase tracking-wide mb-4">Monthly Plan</div>
-              <div className="text-4xl font-bold text-primary mb-1">RM 450</div>
-              <div className="text-sm text-muted-foreground mb-8">4 sessions per month</div>
-              <ul className="space-y-3 mb-8">
-                {["4 x Qi Master sessions", "Priority booking at KRPM", "Personalized recovery tracking", "WhatsApp support with Arie", "Free recovery assessment"].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm">
-                    <Check className="w-4 h-4 text-accent mt-0.5 shrink-0" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button className="w-full rounded-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                Start Monthly Plan <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </div>
-
-            {/* Annual Membership */}
-            <div className="bg-card rounded-2xl p-8 border border-border shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">Annual Member</div>
-              <div className="text-4xl font-bold text-primary mb-1">RM 3,600</div>
-              <div className="text-sm text-muted-foreground mb-8">48 sessions over 12 months</div>
-              <ul className="space-y-3 mb-8">
-                {["48 Qi Master sessions", "Unlimited priority booking", "Free guest passes (4/year)", "Dedicated locker at KRPM", "Annual performance review", "Earliest access to new therapies"].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm">
-                    <Check className="w-4 h-4 text-accent mt-0.5 shrink-0" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button variant="outline" className="w-full rounded-full border-primary/30 text-primary hover:bg-primary/5">
-                Become a Member
-              </Button>
-            </div>
+            ))}
           </div>
-
-          <p className="text-center text-sm text-muted-foreground mt-10">
-            All sessions at Kelab Rahman Putra Malaysia.{" "}
-            <a href="https://wa.me/60126595319" className="text-accent underline hover:no-underline">
-              WhatsApp Arie
-            </a>{" "}
-            to arrange your first session.
-          </p>
         </div>
       </section>
 
-      {/* Product 2: Qi Mini */}
-      <section id="qi-mini" className="py-24 md:py-32 relative">
+      {/* Services Section */}
+      <section id="services" className="py-24 bg-background relative overflow-hidden">
+        <div className="container px-6">
+          <div className="text-center mb-16">
+            <span className="text-accent font-bold tracking-widest uppercase text-sm mb-3 block">Our Services</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Experience BMW Wellness</h2>
+            <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+              Professional bio-physics energy therapy services for your health and wellbeing.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Service 1: 12-in-1 Capsule */}
+            <Card className="overflow-hidden border-2 border-accent/30 hover:border-accent/50 transition-colors">
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src={BMW_ASSETS.experience3}
+                  alt="12-in-1 Bio-Physics Energy Capsule Chamber"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-8">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-3 h-3 rounded-full bg-accent animate-pulse" />
+                  <span className="text-sm font-semibold text-accent uppercase tracking-wide">Flagship</span>
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-2">12-in-1 Energy Capsule Chamber</h3>
+                <p className="text-muted-foreground mb-6">
+                  Our signature treatment combining 9 bio-physics technologies for comprehensive wellness. 60 minutes of deep therapeutic energy restoration.
+                </p>
+                <div className="flex items-baseline gap-2 mb-6">
+                  <span className="text-3xl font-bold text-primary">RM 80</span>
+                  <span className="text-muted-foreground">from per session</span>
+                </div>
+                <ul className="space-y-2 mb-6">
+                  {[
+                    "9 advanced bio-physics technologies",
+                    "60-minute full session",
+                    "Personalized wellness consultation",
+                    "Post-session recovery guidance"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm">
+                      <Check className="w-4 h-4 text-accent shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button className="w-full rounded-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold" asChild>
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                    Book Capsule Session <ArrowRight className="ml-2 w-4 h-4" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Service 2: Bio-resonance Scan */}
+            <Card className="overflow-hidden border-2 border-secondary/30 hover:border-secondary/50 transition-colors">
+              <div className="aspect-video overflow-hidden bg-muted flex items-center justify-center">
+                <div className="text-center p-8">
+                  <Shield className="w-16 h-16 text-secondary mx-auto mb-4" />
+                  <span className="text-muted-foreground text-sm">Bio-Resonance Scan Technology</span>
+                </div>
+              </div>
+              <CardContent className="p-8">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-3 h-3 rounded-full bg-secondary animate-pulse" />
+                  <span className="text-sm font-semibold text-secondary uppercase tracking-wide">Wellness Assessment</span>
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-2">Bio-Resonance Scan + Treatment</h3>
+                <p className="text-muted-foreground mb-6">
+                  Advanced body energy scanning to identify imbalances, followed by targeted treatment. First visit complimentary with any session booking.
+                </p>
+                <div className="flex items-baseline gap-2 mb-6">
+                  <span className="text-3xl font-bold text-primary">FREE</span>
+                  <span className="text-muted-foreground">first scan (45 min)</span>
+                </div>
+                <ul className="space-y-2 mb-6">
+                  {[
+                    "Comprehensive energy scan",
+                    "Personalized treatment plan",
+                    "Expert wellness consultation",
+                    "Follow-up recommendations"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm">
+                      <Check className="w-4 h-4 text-secondary shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button
+                  variant="outline"
+                  className="w-full rounded-full border-secondary/30 text-secondary hover:bg-secondary/10 font-semibold"
+                  asChild
+                >
+                  <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+                    Book Bio-Resonance Scan <ArrowRight className="ml-2 w-4 h-4" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-24 bg-muted relative overflow-hidden">
         <div className="container px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -370,42 +380,33 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="order-2 md:order-1"
             >
-              <span className="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">Compact Power</span>
+              <span className="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">About Us</span>
               <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-                The Qi Mini: <br />
-                <span className="italic text-muted-foreground">Foundation of Vitality.</span>
+                美康养身<br />
+                <span className="text-muted-foreground">Beauty Meridian Wellness</span>
               </h2>
-              
-              <p className="text-lg text-muted-foreground mb-6">
-                Your pelvic floor is the hidden powerhouse of your core. The Qi Mini delivers gentle, rhythmic, and circulating energy waves to this vital area—an effortless, internal workout for your body's foundation.
-              </p>
 
-              <Accordion type="single" collapsible className="w-full mb-8">
-                <AccordionItem value="item-1" className="border-b-border/50">
-                  <AccordionTrigger className="text-lg font-bold text-primary">The Hidden Powerhouse</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    Weakness in your pelvic floor can lead to instability and energy drops. The Qi Mini targets this foundational area to restore balance from the bottom up.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-2" className="border-b-border/50">
-                  <AccordionTrigger className="text-lg font-bold text-primary">Effortless Core Workout</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    Just sit and let the Qi Mini do the work. The circulating stimulation helps to tone and strengthen the muscles that support your spine and internal organs.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-3" className="border-b-border/50">
-                  <AccordionTrigger className="text-lg font-bold text-primary">Boost Your Energy (Qi)</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    By improving circulation and strengthening your core foundation, the Qi Mini helps unblock and boost your body's central energy flow.
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+              <div className="space-y-6 text-lg text-muted-foreground mb-8">
+                <p>
+                  BMW Wellness is a social health center dedicated to helping seniors restore their vitality through advanced bio-physics energy therapy. Our 12-in-1 Bio-Physics Energy Capsule Chamber represents the latest in non-invasive wellness technology.
+                </p>
+                <p>
+                  We believe in preventive healthcare — addressing health concerns before they become serious issues. Our approach combines ancient wisdom with modern science to deliver gentle, effective treatments for seniors.
+                </p>
+              </div>
 
-              <Button size="lg" className="rounded-full px-8 bg-primary text-primary-foreground hover:bg-primary/90">
-                Order Your Qi Mini Today
-              </Button>
+              <div className="flex items-center gap-4 p-6 bg-card rounded-2xl border border-border/50">
+                <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
+                  <Sparkles className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-primary">BMW AI Assistant</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Amanda&apos;s cloned voice, powered by Longevity Valley Agentic Commerce — available 24/7 to answer your questions.
+                  </p>
+                </div>
+              </div>
             </motion.div>
 
             <motion.div
@@ -413,22 +414,18 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="order-1 md:order-2 relative"
+              className="relative"
             >
-              <div className="relative rounded-full aspect-square bg-secondary/20 flex items-center justify-center p-12">
-                <div className="absolute inset-0 rounded-full border border-dashed border-primary/20 animate-[spin_10s_linear_infinite]" />
-                <div className="absolute inset-4 rounded-full border border-primary/10" />
-                
-                <img 
-                  src="/images/qi-mini.png" 
-                  alt="DR MAGfield Qi Mini"
-                  className="w-full h-auto drop-shadow-2xl relative z-10 transform hover:scale-105 transition-transform duration-500"
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
+                <img
+                  src={BMW_ASSETS.heroImage}
+                  alt="BMW Wellness Center"
+                  className="w-full h-full object-cover"
                 />
-                
-                {/* Energy Waves Effect */}
-                <div className="absolute inset-0 z-0">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accent/5 rounded-full animate-ping" style={{ animationDuration: '3s' }} />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-accent/10 rounded-full animate-ping" style={{ animationDuration: '3s', animationDelay: '1s' }} />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <div className="text-sm font-medium uppercase tracking-wider mb-1">Social Health Center for Seniors</div>
+                  <div className="text-lg font-bold">Preventive Wellness · Energy Medicine</div>
                 </div>
               </div>
             </motion.div>
@@ -436,35 +433,162 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust / Footer Section */}
-      <footer className="bg-primary text-primary-foreground py-16 border-t border-white/10">
+      {/* Contact Section */}
+      <section id="contact" className="py-24 bg-primary text-primary-foreground">
         <div className="container px-6">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
-            <div className="col-span-1 md:col-span-2">
-              <div className="text-2xl font-bold font-bold mb-4">DR MAGfield</div>
-              <p className="text-primary-foreground/70 max-w-sm">
-                Bridging Qi-driven performance technology with modern science — at Kelab Rahman Putra Malaysia.
+          <div className="grid md:grid-cols-2 gap-16">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
+              <p className="text-primary-foreground/70 text-lg mb-8">
+                Ready to experience the 12-in-1 Bio-Physics Energy Capsule? Contact us today to book your session or learn more about our services.
+              </p>
+
+              <div className="space-y-6">
+                {/* WhatsApp */}
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-[#25D366]/20 flex items-center justify-center">
+                    <MessageCircle className="w-6 h-6 text-[#25D366]" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold">WhatsApp</h4>
+                    <a
+                      href={WHATSAPP_LINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-foreground/70 hover:text-[#25D366] transition-colors"
+                    >
+                      011 703 21128
+                    </a>
+                  </div>
+                </div>
+
+                {/* Telegram */}
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-[#0088cc]/20 flex items-center justify-center">
+                    <Send className="w-6 h-6 text-[#0088cc]" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold">Telegram</h4>
+                    <a
+                      href={TELEGRAM_LINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-foreground/70 hover:text-[#0088cc] transition-colors"
+                    >
+                      @BMW_Wellness_Bot
+                    </a>
+                  </div>
+                </div>
+
+                {/* Location */}
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold">Location</h4>
+                    <p className="text-primary-foreground/70">
+                      11, Jalan 4/92B, Taman Kobena<br />
+                      Cheras, Malaysia
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mt-10">
+                <Button
+                  size="lg"
+                  className="rounded-full bg-[#25D366] hover:bg-[#25D366]/90 text-white font-semibold"
+                  asChild
+                >
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2 w-4 h-4" />
+                    WhatsApp Amanda
+                  </a>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold bg-transparent"
+                  asChild
+                >
+                  <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+                    <Send className="mr-2 w-4 h-4" />
+                    Chat on Telegram
+                  </a>
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Map Placeholder */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="bg-card rounded-3xl overflow-hidden aspect-square flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="w-20 h-20 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <h4 className="font-bold text-primary text-xl mb-2">Visit Us</h4>
+                  <p className="text-muted-foreground mb-4">
+                    11, Jalan 4/92B<br />
+                    Taman Kobena, Cheras<br />
+                    Malaysia
+                  </p>
+                  <a
+                    href="https://maps.google.com/?q=Taman+Kobena+Cheras+Malaysia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:underline text-sm"
+                  >
+                    Open in Google Maps →
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-primary-foreground text-primary py-12 border-t border-border/10">
+        <div className="container px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center gap-3">
+              <img src={BMW_ASSETS.logo} alt="BMW Wellness" className="h-8 w-auto brightness-0" />
+              <div className="text-lg font-bold">BMW Wellness</div>
+            </div>
+            <div className="text-center md:text-left">
+              <p className="text-primary/60 text-sm">
+                美康养身 Beauty Meridian Wellness — Social Health Center for Seniors
               </p>
             </div>
-            <div>
-              <h4 className="font-bold mb-4">Products</h4>
-              <ul className="space-y-2 text-primary-foreground/70">
-                <li><a href="#qi-master" className="hover:text-white transition-colors">Qi Master</a></li>
-                <li><a href="#qi-mini" className="hover:text-white transition-colors">Qi Mini</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Accessories</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Support</h4>
-              <ul className="space-y-2 text-primary-foreground/70">
-                <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Warranty</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              </ul>
+            <div className="flex items-center gap-4">
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-primary/60 hover:text-[#25D366] transition-colors">
+                <MessageCircle className="w-5 h-5" />
+              </a>
+              <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="text-primary/60 hover:text-[#0088cc] transition-colors">
+                <Send className="w-5 h-5" />
+              </a>
             </div>
           </div>
-          <div className="pt-8 border-t border-white/10 text-center text-primary-foreground/50 text-sm">
-            © {new Date().getFullYear()} DR MAGfield. All rights reserved.
+          <div className="pt-8 mt-8 border-t border-primary/10 text-center text-primary/40 text-sm">
+            © {new Date().getFullYear()} BMW Wellness. All rights reserved.
           </div>
         </div>
       </footer>
