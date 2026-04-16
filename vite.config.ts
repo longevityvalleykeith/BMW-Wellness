@@ -1,4 +1,4 @@
-import { jsxLocPlugin } from "@builder.io/vite-plugin-jsx-loc";
+// NOTE: @builder.io/vite-plugin-jsx-loc removed — requires Vite ^4||^5, project uses Vite ^7. Plugin had zero source-code usage.
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import fs from "node:fs";
@@ -6,7 +6,7 @@ import path from "path";
 import { defineConfig } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
+const plugins = [react(), tailwindcss(), vitePluginManusRuntime()];
 
 export default defineConfig({
   plugins,
