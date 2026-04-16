@@ -101,342 +101,298 @@
                   + FAQPage (GEO webmcp manifest) + WebSite (searchAction)
          ============================================================ -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-
-        /* ── WebSite (with search box for sitelinks) ── */
-        {
-          "@type": "WebSite",
-          "@id": "https://bmw-wellness-landing.vercel.app/#website",
-          "url": "https://bmw-wellness-landing.vercel.app/",
-          "name": "BMW Wellness — DR MAGfield 12-in-1 Bio-Physics Energy Capsule",
-          "description": "Non-invasive wellness therapy for seniors in Cheras, Malaysia. DR MAGfield 12-in-1 Bio-Physics Energy Capsule Chamber for pain relief, energy restoration and preventive health.",
-          "publisher": { "@id": "https://bmw-wellness-landing.vercel.app/#localbusiness" },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://bmw-wellness-landing.vercel.app/?q={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-          },
-          "inLanguage": ["en-MY", "en-SG"]
-        },
-
-        /* ── LocalBusiness (FULLY EXPANDED — Fix #3) ── */
-        {
-          "@type": "LocalBusiness",
-          "@id": "https://bmw-wellness-landing.vercel.app/#localbusiness",
-          "name": "BMW Wellness 美康养身 Beauty Meridian Wellness",
-          "description": "Social health centre for seniors offering DR MAGfield 12-in-1 Bio-Physics Energy Capsule therapy, bio-resonance scanning, and preventive wellness services in Cheras, Kuala Lumpur, Malaysia.",
-          "url": "https://bmw-wellness-landing.vercel.app",
-          "telephone": "+60-11-7032-1128",
-          "image": "https://wlwzfjlvwaosonorsvyf.supabase.co/storage/v1/object/public/brand-assets/bmw-wellness/bmw-experience-1.jpg",
-          "priceRange": "RM 80–200",
-          "paymentAccepted": "Cash, DuitNow QR, Bank Transfer",
-          "currenciesAccepted": "MYR, SGD",
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-              "opens": "09:00",
-              "closes": "20:00"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Saturday","Sunday"],
-              "opens": "10:00",
-              "closes": "18:00"
-            }
-          ],
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "11, Jalan 4/92B, Taman Kobena",
-            "addressLocality": "Cheras",
-            "addressRegion": "Kuala Lumpur",
-            "postalCode": "56000",
-            "addressCountry": "MY"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "3.1070",
-            "longitude": "101.7360"
-          },
-          "areaServed": [
-            {
-              "@type": "State",
-              "name": "Kuala Lumpur",
-              "containedIn": "Malaysia"
-            },
-            {
-              "@type": "City",
-              "name": "Cheras",
-              "containedIn": "Kuala Lumpur"
-            },
-            {
-              "@type": "State",
-              "name": "Selangor",
-              "containedIn": "Malaysia"
-            },
-            {
-              "@type": "Country",
-              "name": "Singapore"
-            }
-          ],
-          "availableLanguage": ["English", "Malay", "Mandarin", "Cantonese", "Tamil", "Hokkien"],
-          "foundingDate": "2024",
-          "foundingLocation": "Cheras, Kuala Lumpur, Malaysia",
-          "numberOfEmployees": { "@type": "QuantitativeValue", "value": "2–10" },
-          "sameAs": [
-            "https://wa.me/601170321128",
-            "https://t.me/BMW_Wellness_Bot",
-            "https://www.facebook.com/p/Beauty-Meridian-Wellness-美康养身-61578874572981/"
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Wellness Services — BMW Wellness",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "DR MAGfield 12-in-1 Energy Capsule Chamber",
-                  "description": "60-minute bio-physics energy therapy session combining 9 advanced technologies: magnetic vortex, negative ions, far infrared, brain wave entrainment, jade energy stone, mono light therapy, graphene conduction, ozone sterilization, and magnetism."
-                },
-                "price": "80",
-                "priceCurrency": "MYR",
-                "offerFrequency": "per session",
-                "availability": "https://schema.org/InStock"
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Bio-Resonance Full Body Scan",
-                  "description": "Advanced energy-body scanning with personalised wellness report and consultation. Complimentary with any treatment session."
-                },
-                "price": "0",
-                "priceCurrency": "MYR",
-                "availability": "https://schema.org/OnlyFirstVisit"
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Rotational Magnetic Therapy (旋磁疗法)",
-                  "description": "Targeted magnetic therapy for pain management, muscle recovery and mobility improvement using Professor Wang Shijie's rotational magnetic field technology."
-                },
-                "price": "120",
-                "priceCurrency": "MYR",
-                "offerFrequency": "per session"
-              }
-            ]
-          }
-        },
-
-        /* ── Service: Malaysia (Fix #3, #6) ── */
-        {
-          "@type": "Service",
-          "@id": "https://bmw-wellness-landing.vercel.app/#service-my",
-          "serviceType": "DR MAGfield Bio-Physics Energy Capsule Therapy — Malaysia",
-          "provider": { "@id": "https://bmw-wellness-landing.vercel.app/#localbusiness" },
-          "areaServed": [
-            { "@type": "City", "name": "Cheras", "containedIn": { "@type": "State", "name": "Kuala Lumpur" } },
-            { "@type": "State", "name": "Selangor" },
-            { "@type": "Country", "name": "Malaysia" }
-          ],
-          "availableChannel": {
-            "@type": "ServiceChannel",
-            "serviceUrl": "https://bmw-wellness-landing.vercel.app",
-            "serviceLocation": { "@id": "https://bmw-wellness-landing.vercel.app/#localbusiness" }
-          },
-          "description": "DR MAGfield 12-in-1 Bio-Physics Energy Capsule Chamber — non-invasive wellness therapy for seniors in Malaysia. Combines magnetic vortex, negative ions, far infrared, brain wave entrainment, jade energy stone, mono light therapy, graphene conduction, ozone sterilisation, and magnetism. RM 80/session.",
-          "name": "12-in-1 Energy Capsule Chamber | BMW Wellness Cheras Malaysia",
-          "url": "https://bmw-wellness-landing.vercel.app",
-          "priceRange": "RM 80–200",
-          "priceCurrency": "MYR"
-        },
-
-        /* ── Service: Singapore (Fix #6) ── */
-        {
-          "@type": "Service",
-          "@id": "https://bmw-wellness-landing.vercel.app/#service-sg",
-          "serviceType": "DR MAGfield Bio-Physics Energy Capsule Therapy — Singapore",
-          "provider": { "@id": "https://bmw-wellness-landing.vercel.app/#localbusiness" },
-          "areaServed": [
-            { "@type": "Country", "name": "Singapore" }
-          ],
-          "availableChannel": {
-            "@type": "ServiceChannel",
-            "serviceUrl": "https://bmw-wellness-landing.vercel.app",
-            "serviceLocation": { "@id": "https://bmw-wellness-landing.vercel.app/#localbusiness" }
-          },
-          "description": "DR MAGfield 12-in-1 Bio-Physics Energy Capsule therapy available to Singapore clients at BMW Wellness, Cheras, Malaysia. Cross-border wellness travel — 20 minutes from Singapore via EQS. RM 80/session, complimentary transport from Cheras MRT for first-time SG visitors.",
-          "name": "DR MAGfield 12-in-1 Capsule | BMW Wellness — Singapore Clients",
-          "url": "https://bmw-wellness-landing.vercel.app",
-          "priceRange": "RM 80–200 (SGD ~23–57)",
-          "priceCurrency": "MYR"
-        },
-
-        /* ── FAQPage: GEO WebMCP Manifest (Fix #4) ──
-             Dual-purpose: SEO featured snippets + GEO context agent ingestion.
-             GEO WebMCP schema: each Q&A is structured for agent parsing with
-             geo, language, and intent metadata embedded in acceptedAnswer.text.
-        ── */
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-
-            /* Q1: Core identity */
-            {
-              "@type": "Question",
-              "name": "What is the DR MAGfield 12-in-1 Bio-Physics Energy Capsule Chamber?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The DR MAGfield 12-in-1 Bio-Physics Energy Capsule Chamber is a non-invasive wellness therapy device combining 9 advanced bio-physics technologies — (1) magnetic vortex circulation, (2) high-density negative ions, (3) far infrared rays, (4) brain wave entrainment (alpha/theta), (5) jade energy stone, (6) mono light therapy, (7) graphene far infrared conduction, (8) ozone sterilisation cycle, and (9) triple magnetic field therapy — housed in a single capsule-shaped chamber. Designed for seniors 50+ in Malaysia and Singapore, it delivers 60-minute sessions from RM 80 at BMW Wellness, Cheras, Kuala Lumpur. GEO CONTEXT: MY (Kuala Lumpur, Selangor, Cheras), SG (Singapore cross-border wellness travellers); languages: EN, ZH, MY."
-              }
-            },
-
-            /* Q2: Technology breakdown */
-            {
-              "@type": "Question",
-              "name": "What are the 9 technologies inside the DR MAGfield 12-in-1 capsule?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The 12-in-1 Bio-Physics Energy Capsule integrates: (1) Magnetic Vortex Circulation — rotating magnetic fields improving microcirculation; (2) High-Density Negative Ions —空气维生素 for cellular oxygen absorption; (3) Far Infrared Rays (FIR) — deep tissue warmth penetrating 4–6 cm; (4) Brain Wave Entrainment — alpha/theta frequencies for nervous system regulation; (5) Jade Energy Stone — natural far infrared emission and negative ion release; (6) Mono Light Therapy — specific wavelengths for cellular metabolism; (7) Graphene FIR Conduction — graphene-heated floor/bed for whole-body FIR exposure; (8) Ozone Sterilisation — interior sanitisation cycle between sessions; (9) Triple Magnetic Field — three-dimensional magnetic coverage for comprehensive field application. Location: BMW Wellness, 11 Jalan 4/92B Taman Kobena, Cheras, KL."
-              }
-            },
-
-            /* Q3: Who it's for */
-            {
-              "@type": "Question",
-              "name": "Who is the 12-in-1 Energy Capsule designed for?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The DR MAGfield 12-in-1 Capsule is specifically designed for: (1) Seniors aged 50+ experiencing chronic pain, arthritis, joint stiffness, or limited mobility; (2) Adults in recovery from illness or surgery seeking non-invasive cellular support; (3) Individuals with low energy, poor sleep, or stress-related fatigue; (4) Post-stroke or Parkinsonism patients under specialist supervision; (5) Preventive wellness seekers who prefer drug-free, non-surgical therapies. It is not recommended for persons with pacemakers, metal implants, or during acute infection. BMW Wellness serves clients across Kuala Lumpur, Selangor (Malaysia) and Singapore cross-border travellers. Languages: English, Mandarin, Cantonese, Malay, Hokkien, Tamil."
-              }
-            },
-
-            /* Q4: Conditions addressed */
-            {
-              "@type": "Question",
-              "name": "What health conditions can the DR MAGfield capsule help with?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Based on client reports and the technology's design, the DR MAGfield 12-in-1 capsule may support wellness in: chronic pain and arthritis (knee, hip, lumbar spine); muscular tension and stiffness in shoulders, neck and back; poor peripheral circulation (cold hands/feet, numbness); low energy and chronic fatigue; sleep disturbance and insomnia; stress and nervous system over-activation; post-illness recovery and immune support; age-related mobility decline. It is a wellness therapy, not a medical treatment. Clients should continue following their physician's treatment plans. BMW Wellness is located in Cheras, Kuala Lumpur, Malaysia — accessible via Cheras MRT (Taman Mutiara station). Sessions from RM 80."
-              }
-            },
-
-            /* Q5: Pricing MY */
-            {
-              "@type": "Question",
-              "name": "How much does a DR MAGfield session cost at BMW Wellness Malaysia?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "BMW Wellness Malaysia pricing (in MYR): DR MAGfield 12-in-1 Energy Capsule session — from RM 80 per 60-minute session; Rotational Magnetic Therapy (旋磁疗法) — from RM 120 per session; Bio-Resonance Full Body Scan — FREE with any paid session (first visit). For Malaysian clients, payment accepted: Cash, DuitNow QR, Bank Transfer (Maybank / CIMB / Public Bank). Located at 11, Jalan 4/92B, Taman Kobena, Cheras, 56000 Kuala Lumpur. Open Mon–Fri 9am–8pm, Sat–Sun 10am–6pm. Book via WhatsApp +6011 7032 1128 or Telegram @BMW_Wellness_Bot."
-              }
-            },
-
-            /* Q6: SG pricing / cross-border */
-            {
-              "@type": "Question",
-              "name": "How much does DR MAGfield therapy cost for Singapore clients?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "For Singapore clients, the DR MAGfield 12-in-1 capsule session costs from RM 80 (approximately SGD 23–28 at current exchange rates). BMW Wellness is located 20 minutes from Singapore via the Second Link expressway, making same-day return trips feasible. First-time Singapore visitors receive complimentary transport from Cheras MRT (Taman Mutiara station). A typical same-day session itinerary: depart Singapore 8:30am → arrive BMW Wellness 10:00am → 60-minute capsule session + bio-scan → depart 12:00pm → return Singapore by 1:30pm. Payment in Malaysia: DuitNow QR or bank transfer preferred. SGD cash accepted at prevailing rate. WhatsApp: +6011 7032 1128."
-              }
-            },
-
-            /* Q7: Booking */
-            {
-              "@type": "Question",
-              "name": "How do I book a session at BMW Wellness?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Booking options for BMW Wellness, Cheras, Kuala Lumpur: (1) WhatsApp — +6011 7032 1128 (fastest response, 9am–8pm MYT Mon–Fri, 10am–6pm Sat–Sun); (2) Telegram — @BMW_Wellness_Bot (24/7 automated booking); (3) Telegram chatbot — AI booking assistant for after-hours enquiries; (4) Walk-in — subject to availability, advance booking strongly recommended for weekend slots. For Singapore clients, WhatsApp booking is recommended at least 1 day in advance. Cancellation policy: 24-hour notice. BMW Wellness address: 11, Jalan 4/92B, Taman Kobena, Cheras, 56000 Kuala Lumpur, Malaysia. Nearest MRT: Taman Mutiara (Cheras MRT, Kajang Line)."
-              }
-            },
-
-            /* Q8: Safety / contraindications */
-            {
-              "@type": "Question",
-              "name": "Is the DR MAGfield 12-in-1 capsule therapy safe for seniors?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The DR MAGfield 12-in-1 capsule is a non-invasive, drug-free wellness therapy. Contraindications — DO NOT use if you have: a pacemaker or implanted defibrillator; metal implants in the spine or joints (consult physician first); acute fever or active infection; pregnancy. Precautions for: epilepsy or seizure disorder; deep vein thrombosis (DVT); severe osteoporosis. Before your first session, BMW Wellness conducts a personalised wellness consultation (included free) to assess suitability. All sessions are supervised by trained wellness consultants. Side effects reported by some clients may include mild warmth, drowsiness, or temporary skin flushing — these are normal responses to far infrared and magnetic field exposure. BMW Wellness, 11 Jalan 4/92B, Cheras, KL. WhatsApp: +6011 7032 1128."
-              }
-            },
-
-            /* Q9: PEMF vs DR MAGfield vs massage */
-            {
-              "@type": "Question",
-              "name": "How does DR MAGfield 12-in-1 therapy compare to PEMF mats or massage?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Key differences: (1) PEMF mats — deliver pulsed electromagnetic fields to targeted body areas, typically used at home; DR MAGfield is a full-body capsule chamber with 9 integrated technologies at clinical-grade intensity; (2) Massage — manually manipulates soft tissue for immediate muscle relaxation; DR MAGfield works at the cellular and bio-physics level, combining magnetic fields, FIR, negative ions, and brain wave entrainment in one session; (3) DR MAGfield vs home PEMF — clinical-grade magnetic field strength, whole-body coverage, 9 technologies vs typically 1–2 in consumer devices; (4) Combination approach — many BMW Wellness clients use DR MAGfield sessions alongside manual therapy or physiotherapy. BMW Wellness also offers Rotational Magnetic Therapy (旋磁疗法, Prof Wang Shijie's system) as an alternative targeted treatment. Sessions from RM 80 at BMW Wellness Cheras KL. Book: WhatsApp +6011 7032 1128."
-              }
-            },
-
-            /* Q10: Senior-specific benefits */
-            {
-              "@type": "Question",
-              "name": "What specific benefits does the 12-in-1 capsule offer for elderly seniors?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "For seniors 60+, the DR MAGfield 12-in-1 capsule offers the following wellnes support: (1) Pain management — reduction in chronic joint and muscle pain without medication; (2) Improved circulation — addressing cold extremities and peripheral vascular issues common in aging; (3) Better sleep quality — brain wave entrainment (alpha/theta) supports nervous system regulation and sleep onset; (4) Energy and vitality — negative ions and FIR support cellular metabolism and oxygen absorption; (5) Joint mobility — magnetic field therapy may reduce stiffness and improve range of motion; (6) Stress reduction — combined multi-modality approach addresses both physical and nervous system tension; (7) Social connection — BMW Wellness operates as a social health centre, offering community atmosphere for seniors. Each session is 60 minutes in a comfortable capsule chamber. First visit includes complimentary bio-resonance scan. BMW Wellness Cheras, KL — WhatsApp +6011 7032 1128."
-              }
-            },
-
-            /* Q11: Technology vs competitor */
-            {
-              "@type": "Question",
-              "name": "What makes the DR MAGfield 12-in-1 different from other wellness pods or therapy beds?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The DR MAGfield 12-in-1 Bio-Physics Energy Capsule is distinguished by: (1) Number of integrated systems — 9 co-located technologies (most consumer wellness devices have 1–3); (2) Full-body capsule design — unlike pads or mats, the entire body is inside the therapeutic field; (3) Triple magnetic field architecture — 3-dimensional magnetic coverage vs flat coil systems; (4) Jade energy stone + graphene FIR — natural + synthetic FIR sources combined; (5) Brain wave entrainment — embedded neuro-frequency audio for nervous system regulation; (6) Ozone sterilisation — clinical hygiene standard between sessions; (7) Bio-resonance scanning — complimentary pre/post session body scan for personalised wellness tracking; (8) Social health centre model — BMW Wellness provides consultation, community and continuity of care vs single-use device rental. Available at BMW Wellness, Cheras, Kuala Lumpur, Malaysia. From RM 80/session."
-              }
-            },
-
-            /* Q12: Rotational magnetic therapy (旋磁疗法) */
-            {
-              "@type": "Question",
-              "name": "What is 旋磁疗法 (Rotational Magnetic Therapy) and does BMW Wellness offer it?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "旋磁疗法 (Xuán cí liáo fǎ — Rotational Magnetic Therapy) was developed by Professor Wang Shijie. It uses rotating magnetic fields combined with heat and vibration to address muscle tension, circulation deficits, and pain. BMW Wellness offers Rotational Magnetic Therapy as a standalone service (approximately RM 120/session) alongside the DR MAGfield 12-in-1 capsule. Key differentiators of the BMW Wellness rotational magnetic system: triple-axis rotating magnetic field for comprehensive coverage; adjustable intensity for senior vs athletic use cases; complementary to the 12-in-1 capsule (many clients do both in one visit). The 旋磁疗法 is especially popular with clients with lumbar spine issues, sports injuries, and post-surgical recovery. BMW Wellness, Cheras, Kuala Lumpur. Book via WhatsApp +6011 7032 1128."
-              }
-            },
-
-            /* Q13: Golf recovery specific */
-            {
-              "@type": "Question",
-              "name": "Can the DR MAGfield capsule help with golf recovery and back pain from golf?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes — the DR MAGfield 12-in-1 capsule is well-suited for golfers and golf recovery: (1) Back and lumbar tension — the horizontal capsule position and FIR + magnetic therapy address lower back strain from repetitive swinging; (2) Hip and knee joint recovery — magnetic fields and FIR penetrate deep joints commonly stressed during golf; (3) Pre-round preparation — a 30-minute session 1–2 hours before teeing off may support circulation and mobility; (4) Post-round recovery — sessions within 2–4 hours of completing 18 holes may address accumulated muscular fatigue; (5) Shoulder and elbow — rotational magnetic therapy (旋磁疗法) at BMW Wellness targets upper limb strain from the golf swing. Professional golfers use similar recovery modalities including Normatec compression, cryotherapy, and magnetic therapy. BMW Wellness also offers Rotational Magnetic Therapy for targeted golf injury recovery. From RM 80. Location: Cheras, KL. WhatsApp: +6011 7032 1128."
-              }
-            }
-
-          ]
-        },
-
-        /* ── BreadcrumbList — PRESERVED ── */
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://bmw-wellness-landing.vercel.app"
-            }
-          ]
-        }
-
-      ]
-    }
-    </script>
+{
+"@context": "https://schema.org",
+"@graph": [
+{
+"@type": "WebSite",
+"@id": "https://bmw-wellness-landing.vercel.app/#website",
+"url": "https://bmw-wellness-landing.vercel.app/",
+"name": "BMW Wellness — DR MAGfield 12-in-1 Bio-Physics Energy Capsule",
+"description": "Non-invasive wellness therapy for seniors in Cheras, Malaysia. DR MAGfield 12-in-1 Bio-Physics Energy Capsule Chamber for pain relief, energy restoration and preventive health.",
+"publisher": { "@id": "https://bmw-wellness-landing.vercel.app/#localbusiness" },
+"potentialAction": {
+"@type": "SearchAction",
+"target": {
+"@type": "EntryPoint",
+"urlTemplate": "https://bmw-wellness-landing.vercel.app/?q={search_term_string}"
+},
+"query-input": "required name=search_term_string"
+},
+"inLanguage": ["en-MY", "en-SG"]
+},
+{
+"@type": "LocalBusiness",
+"@id": "https://bmw-wellness-landing.vercel.app/#localbusiness",
+"name": "BMW Wellness 美康养身 Beauty Meridian Wellness",
+"description": "Social health centre for seniors offering DR MAGfield 12-in-1 Bio-Physics Energy Capsule therapy, bio-resonance scanning, and preventive wellness services in Cheras, Kuala Lumpur, Malaysia.",
+"url": "https://bmw-wellness-landing.vercel.app",
+"telephone": "+60-11-7032-1128",
+"image": "https://wlwzfjlvwaosonorsvyf.supabase.co/storage/v1/object/public/brand-assets/bmw-wellness/bmw-experience-1.jpg",
+"priceRange": "RM 80–200",
+"paymentAccepted": "Cash, DuitNow QR, Bank Transfer",
+"currenciesAccepted": "MYR, SGD",
+"openingHoursSpecification": [
+{
+"@type": "OpeningHoursSpecification",
+"dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+"opens": "09:00",
+"closes": "20:00"
+},
+{
+"@type": "OpeningHoursSpecification",
+"dayOfWeek": ["Saturday","Sunday"],
+"opens": "10:00",
+"closes": "18:00"
+}
+],
+"address": {
+"@type": "PostalAddress",
+"streetAddress": "11, Jalan 4/92B, Taman Kobena",
+"addressLocality": "Cheras",
+"addressRegion": "Kuala Lumpur",
+"postalCode": "56000",
+"addressCountry": "MY"
+},
+"geo": {
+"@type": "GeoCoordinates",
+"latitude": "3.1070",
+"longitude": "101.7360"
+},
+"areaServed": [
+{
+"@type": "State",
+"name": "Kuala Lumpur",
+"containedIn": "Malaysia"
+},
+{
+"@type": "City",
+"name": "Cheras",
+"containedIn": "Kuala Lumpur"
+},
+{
+"@type": "State",
+"name": "Selangor",
+"containedIn": "Malaysia"
+},
+{
+"@type": "Country",
+"name": "Singapore"
+}
+],
+"availableLanguage": ["English", "Malay", "Mandarin", "Cantonese", "Tamil", "Hokkien"],
+"foundingDate": "2024",
+"foundingLocation": "Cheras, Kuala Lumpur, Malaysia",
+"numberOfEmployees": { "@type": "QuantitativeValue", "value": "2–10" },
+"sameAs": [
+"https://wa.me/601170321128",
+"https://t.me/BMW_Wellness_Bot",
+"https://www.facebook.com/p/Beauty-Meridian-Wellness-美康养身-61578874572981/"
+],
+"hasOfferCatalog": {
+"@type": "OfferCatalog",
+"name": "Wellness Services — BMW Wellness",
+"itemListElement": [
+{
+"@type": "Offer",
+"itemOffered": {
+"@type": "Service",
+"name": "DR MAGfield 12-in-1 Energy Capsule Chamber",
+"description": "60-minute bio-physics energy therapy session combining 9 advanced technologies: magnetic vortex, negative ions, far infrared, brain wave entrainment, jade energy stone, mono light therapy, graphene conduction, ozone sterilization, and magnetism."
+},
+"price": "80",
+"priceCurrency": "MYR",
+"offerFrequency": "per session",
+"availability": "https://schema.org/InStock"
+},
+{
+"@type": "Offer",
+"itemOffered": {
+"@type": "Service",
+"name": "Bio-Resonance Full Body Scan",
+"description": "Advanced energy-body scanning with personalised wellness report and consultation. Complimentary with any treatment session."
+},
+"price": "0",
+"priceCurrency": "MYR",
+"availability": "https://schema.org/OnlyFirstVisit"
+},
+{
+"@type": "Offer",
+"itemOffered": {
+"@type": "Service",
+"name": "Rotational Magnetic Therapy (旋磁疗法)",
+"description": "Targeted magnetic therapy for pain management, muscle recovery and mobility improvement using Professor Wang Shijie's rotational magnetic field technology."
+},
+"price": "120",
+"priceCurrency": "MYR",
+"offerFrequency": "per session"
+}
+]
+}
+},
+{
+"@type": "Service",
+"@id": "https://bmw-wellness-landing.vercel.app/#service-my",
+"serviceType": "DR MAGfield Bio-Physics Energy Capsule Therapy — Malaysia",
+"provider": { "@id": "https://bmw-wellness-landing.vercel.app/#localbusiness" },
+"areaServed": [
+{ "@type": "City", "name": "Cheras", "containedIn": { "@type": "State", "name": "Kuala Lumpur" } },
+{ "@type": "State", "name": "Selangor" },
+{ "@type": "Country", "name": "Malaysia" }
+],
+"availableChannel": {
+"@type": "ServiceChannel",
+"serviceUrl": "https://bmw-wellness-landing.vercel.app",
+"serviceLocation": { "@id": "https://bmw-wellness-landing.vercel.app/#localbusiness" }
+},
+"description": "DR MAGfield 12-in-1 Bio-Physics Energy Capsule Chamber — non-invasive wellness therapy for seniors in Malaysia. Combines magnetic vortex, negative ions, far infrared, brain wave entrainment, jade energy stone, mono light therapy, graphene conduction, ozone sterilisation, and magnetism. RM 80/session.",
+"name": "12-in-1 Energy Capsule Chamber | BMW Wellness Cheras Malaysia",
+"url": "https://bmw-wellness-landing.vercel.app",
+"priceRange": "RM 80–200",
+"priceCurrency": "MYR"
+},
+{
+"@type": "Service",
+"@id": "https://bmw-wellness-landing.vercel.app/#service-sg",
+"serviceType": "DR MAGfield Bio-Physics Energy Capsule Therapy — Singapore",
+"provider": { "@id": "https://bmw-wellness-landing.vercel.app/#localbusiness" },
+"areaServed": [
+{ "@type": "Country", "name": "Singapore" }
+],
+"availableChannel": {
+"@type": "ServiceChannel",
+"serviceUrl": "https://bmw-wellness-landing.vercel.app",
+"serviceLocation": { "@id": "https://bmw-wellness-landing.vercel.app/#localbusiness" }
+},
+"description": "DR MAGfield 12-in-1 Bio-Physics Energy Capsule therapy available to Singapore clients at BMW Wellness, Cheras, Malaysia. Cross-border wellness travel — 20 minutes from Singapore via EQS. RM 80/session, complimentary transport from Cheras MRT for first-time SG visitors.",
+"name": "DR MAGfield 12-in-1 Capsule | BMW Wellness — Singapore Clients",
+"url": "https://bmw-wellness-landing.vercel.app",
+"priceRange": "RM 80–200 (SGD ~23–57)",
+"priceCurrency": "MYR"
+},
+{
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "What is the DR MAGfield 12-in-1 Bio-Physics Energy Capsule Chamber?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The DR MAGfield 12-in-1 Bio-Physics Energy Capsule Chamber is a non-invasive wellness therapy device combining 9 advanced bio-physics technologies — (1) magnetic vortex circulation, (2) high-density negative ions, (3) far infrared rays, (4) brain wave entrainment (alpha/theta), (5) jade energy stone, (6) mono light therapy, (7) graphene far infrared conduction, (8) ozone sterilisation cycle, and (9) triple magnetic field therapy — housed in a single capsule-shaped chamber. Designed for seniors 50+ in Malaysia and Singapore, it delivers 60-minute sessions from RM 80 at BMW Wellness, Cheras, Kuala Lumpur. GEO CONTEXT: MY (Kuala Lumpur, Selangor, Cheras), SG (Singapore cross-border wellness travellers); languages: EN, ZH, MY."
+}
+},
+{
+"@type": "Question",
+"name": "What are the 9 technologies inside the DR MAGfield 12-in-1 capsule?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The 12-in-1 Bio-Physics Energy Capsule integrates: (1) Magnetic Vortex Circulation — rotating magnetic fields improving microcirculation; (2) High-Density Negative Ions —空气维生素 for cellular oxygen absorption; (3) Far Infrared Rays (FIR) — deep tissue warmth penetrating 4–6 cm; (4) Brain Wave Entrainment — alpha/theta frequencies for nervous system regulation; (5) Jade Energy Stone — natural far infrared emission and negative ion release; (6) Mono Light Therapy — specific wavelengths for cellular metabolism; (7) Graphene FIR Conduction — graphene-heated floor/bed for whole-body FIR exposure; (8) Ozone Sterilisation — interior sanitisation cycle between sessions; (9) Triple Magnetic Field — three-dimensional magnetic coverage for comprehensive field application. Location: BMW Wellness, 11 Jalan 4/92B Taman Kobena, Cheras, KL."
+}
+},
+{
+"@type": "Question",
+"name": "Who is the 12-in-1 Energy Capsule designed for?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The DR MAGfield 12-in-1 Capsule is specifically designed for: (1) Seniors aged 50+ experiencing chronic pain, arthritis, joint stiffness, or limited mobility; (2) Adults in recovery from illness or surgery seeking non-invasive cellular support; (3) Individuals with low energy, poor sleep, or stress-related fatigue; (4) Post-stroke or Parkinsonism patients under specialist supervision; (5) Preventive wellness seekers who prefer drug-free, non-surgical therapies. It is not recommended for persons with pacemakers, metal implants, or during acute infection. BMW Wellness serves clients across Kuala Lumpur, Selangor (Malaysia) and Singapore cross-border travellers. Languages: English, Mandarin, Cantonese, Malay, Hokkien, Tamil."
+}
+},
+{
+"@type": "Question",
+"name": "What health conditions can the DR MAGfield capsule help with?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Based on client reports and the technology's design, the DR MAGfield 12-in-1 capsule may support wellness in: chronic pain and arthritis (knee, hip, lumbar spine); muscular tension and stiffness in shoulders, neck and back; poor peripheral circulation (cold hands/feet, numbness); low energy and chronic fatigue; sleep disturbance and insomnia; stress and nervous system over-activation; post-illness recovery and immune support; age-related mobility decline. It is a wellness therapy, not a medical treatment. Clients should continue following their physician's treatment plans. BMW Wellness is located in Cheras, Kuala Lumpur, Malaysia — accessible via Cheras MRT (Taman Mutiara station). Sessions from RM 80."
+}
+},
+{
+"@type": "Question",
+"name": "How much does a DR MAGfield session cost at BMW Wellness Malaysia?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "BMW Wellness Malaysia pricing (in MYR): DR MAGfield 12-in-1 Energy Capsule session — from RM 80 per 60-minute session; Rotational Magnetic Therapy (旋磁疗法) — from RM 120 per session; Bio-Resonance Full Body Scan — FREE with any paid session (first visit). For Malaysian clients, payment accepted: Cash, DuitNow QR, Bank Transfer (Maybank / CIMB / Public Bank). Located at 11, Jalan 4/92B, Taman Kobena, Cheras, 56000 Kuala Lumpur. Open Mon–Fri 9am–8pm, Sat–Sun 10am–6pm. Book via WhatsApp +6011 7032 1128 or Telegram @BMW_Wellness_Bot."
+}
+},
+{
+"@type": "Question",
+"name": "How much does DR MAGfield therapy cost for Singapore clients?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "For Singapore clients, the DR MAGfield 12-in-1 capsule session costs from RM 80 (approximately SGD 23–28 at current exchange rates). BMW Wellness is located 20 minutes from Singapore via the Second Link expressway, making same-day return trips feasible. First-time Singapore visitors receive complimentary transport from Cheras MRT (Taman Mutiara station). A typical same-day session itinerary: depart Singapore 8:30am → arrive BMW Wellness 10:00am → 60-minute capsule session + bio-scan → depart 12:00pm → return Singapore by 1:30pm. Payment in Malaysia: DuitNow QR or bank transfer preferred. SGD cash accepted at prevailing rate. WhatsApp: +6011 7032 1128."
+}
+},
+{
+"@type": "Question",
+"name": "How do I book a session at BMW Wellness?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Booking options for BMW Wellness, Cheras, Kuala Lumpur: (1) WhatsApp — +6011 7032 1128 (fastest response, 9am–8pm MYT Mon–Fri, 10am–6pm Sat–Sun); (2) Telegram — @BMW_Wellness_Bot (24/7 automated booking); (3) Telegram chatbot — AI booking assistant for after-hours enquiries; (4) Walk-in — subject to availability, advance booking strongly recommended for weekend slots. For Singapore clients, WhatsApp booking is recommended at least 1 day in advance. Cancellation policy: 24-hour notice. BMW Wellness address: 11, Jalan 4/92B, Taman Kobena, Cheras, 56000 Kuala Lumpur, Malaysia. Nearest MRT: Taman Mutiara (Cheras MRT, Kajang Line)."
+}
+},
+{
+"@type": "Question",
+"name": "Is the DR MAGfield 12-in-1 capsule therapy safe for seniors?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The DR MAGfield 12-in-1 capsule is a non-invasive, drug-free wellness therapy. Contraindications — DO NOT use if you have: a pacemaker or implanted defibrillator; metal implants in the spine or joints (consult physician first); acute fever or active infection; pregnancy. Precautions for: epilepsy or seizure disorder; deep vein thrombosis (DVT); severe osteoporosis. Before your first session, BMW Wellness conducts a personalised wellness consultation (included free) to assess suitability. All sessions are supervised by trained wellness consultants. Side effects reported by some clients may include mild warmth, drowsiness, or temporary skin flushing — these are normal responses to far infrared and magnetic field exposure. BMW Wellness, 11 Jalan 4/92B, Cheras, KL. WhatsApp: +6011 7032 1128."
+}
+},
+{
+"@type": "Question",
+"name": "How does DR MAGfield 12-in-1 therapy compare to PEMF mats or massage?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Key differences: (1) PEMF mats — deliver pulsed electromagnetic fields to targeted body areas, typically used at home; DR MAGfield is a full-body capsule chamber with 9 integrated technologies at clinical-grade intensity; (2) Massage — manually manipulates soft tissue for immediate muscle relaxation; DR MAGfield works at the cellular and bio-physics level, combining magnetic fields, FIR, negative ions, and brain wave entrainment in one session; (3) DR MAGfield vs home PEMF — clinical-grade magnetic field strength, whole-body coverage, 9 technologies vs typically 1–2 in consumer devices; (4) Combination approach — many BMW Wellness clients use DR MAGfield sessions alongside manual therapy or physiotherapy. BMW Wellness also offers Rotational Magnetic Therapy (旋磁疗法, Prof Wang Shijie's system) as an alternative targeted treatment. Sessions from RM 80 at BMW Wellness Cheras KL. Book: WhatsApp +6011 7032 1128."
+}
+},
+{
+"@type": "Question",
+"name": "What specific benefits does the 12-in-1 capsule offer for elderly seniors?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "For seniors 60+, the DR MAGfield 12-in-1 capsule offers the following wellnes support: (1) Pain management — reduction in chronic joint and muscle pain without medication; (2) Improved circulation — addressing cold extremities and peripheral vascular issues common in aging; (3) Better sleep quality — brain wave entrainment (alpha/theta) supports nervous system regulation and sleep onset; (4) Energy and vitality — negative ions and FIR support cellular metabolism and oxygen absorption; (5) Joint mobility — magnetic field therapy may reduce stiffness and improve range of motion; (6) Stress reduction — combined multi-modality approach addresses both physical and nervous system tension; (7) Social connection — BMW Wellness operates as a social health centre, offering community atmosphere for seniors. Each session is 60 minutes in a comfortable capsule chamber. First visit includes complimentary bio-resonance scan. BMW Wellness Cheras, KL — WhatsApp +6011 7032 1128."
+}
+},
+{
+"@type": "Question",
+"name": "What makes the DR MAGfield 12-in-1 different from other wellness pods or therapy beds?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The DR MAGfield 12-in-1 Bio-Physics Energy Capsule is distinguished by: (1) Number of integrated systems — 9 co-located technologies (most consumer wellness devices have 1–3); (2) Full-body capsule design — unlike pads or mats, the entire body is inside the therapeutic field; (3) Triple magnetic field architecture — 3-dimensional magnetic coverage vs flat coil systems; (4) Jade energy stone + graphene FIR — natural + synthetic FIR sources combined; (5) Brain wave entrainment — embedded neuro-frequency audio for nervous system regulation; (6) Ozone sterilisation — clinical hygiene standard between sessions; (7) Bio-resonance scanning — complimentary pre/post session body scan for personalised wellness tracking; (8) Social health centre model — BMW Wellness provides consultation, community and continuity of care vs single-use device rental. Available at BMW Wellness, Cheras, Kuala Lumpur, Malaysia. From RM 80/session."
+}
+},
+{
+"@type": "Question",
+"name": "What is 旋磁疗法 (Rotational Magnetic Therapy) and does BMW Wellness offer it?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "旋磁疗法 (Xuán cí liáo fǎ — Rotational Magnetic Therapy) was developed by Professor Wang Shijie. It uses rotating magnetic fields combined with heat and vibration to address muscle tension, circulation deficits, and pain. BMW Wellness offers Rotational Magnetic Therapy as a standalone service (approximately RM 120/session) alongside the DR MAGfield 12-in-1 capsule. Key differentiators of the BMW Wellness rotational magnetic system: triple-axis rotating magnetic field for comprehensive coverage; adjustable intensity for senior vs athletic use cases; complementary to the 12-in-1 capsule (many clients do both in one visit). The 旋磁疗法 is especially popular with clients with lumbar spine issues, sports injuries, and post-surgical recovery. BMW Wellness, Cheras, Kuala Lumpur. Book via WhatsApp +6011 7032 1128."
+}
+},
+{
+"@type": "Question",
+"name": "Can the DR MAGfield capsule help with golf recovery and back pain from golf?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes — the DR MAGfield 12-in-1 capsule is well-suited for golfers and golf recovery: (1) Back and lumbar tension — the horizontal capsule position and FIR + magnetic therapy address lower back strain from repetitive swinging; (2) Hip and knee joint recovery — magnetic fields and FIR penetrate deep joints commonly stressed during golf; (3) Pre-round preparation — a 30-minute session 1–2 hours before teeing off may support circulation and mobility; (4) Post-round recovery — sessions within 2–4 hours of completing 18 holes may address accumulated muscular fatigue; (5) Shoulder and elbow — rotational magnetic therapy (旋磁疗法) at BMW Wellness targets upper limb strain from the golf swing. Professional golfers use similar recovery modalities including Normatec compression, cryotherapy, and magnetic therapy. BMW Wellness also offers Rotational Magnetic Therapy for targeted golf injury recovery. From RM 80. Location: Cheras, KL. WhatsApp: +6011 7032 1128."
+}
+}
+]
+},
+{
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "https://bmw-wellness-landing.vercel.app"
+}
+]
+}
+]
+}
+</script>
   </head>
 
   <body>
