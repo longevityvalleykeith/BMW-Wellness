@@ -2,12 +2,12 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://bmw-wellness-landing.vercel.app/sitemap.xml
-
-# Crawl-delay for polite bots (optional)
+# Crawl-delay for polite bots
 Crawl-delay: 1
 
-# Disallow sensitive paths (if any exist in future)
+# Primary sitemap — Malaysia
+Sitemap: https://bmw-wellness-landing.vercel.app/sitemap.xml
+
+# Disallow admin/internal paths (future-proofing)
 # Disallow: /api/
 # Disallow: /admin/

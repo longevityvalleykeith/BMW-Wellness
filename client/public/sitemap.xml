@@ -1,10 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <!-- BMW Wellness — Main Landing Page -->
   <url>
     <loc>https://bmw-wellness-landing.vercel.app/</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bmw-wellness-landing.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en-SG" href="https://bmw-wellness-landing.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bmw-wellness-landing.vercel.app/" />
   </url>
+
+  <!-- Golf Recovery FAQ — targets golfers, PEMF/magnetic therapy keywords -->
+  <url>
+    <loc>https://bmw-wellness-landing.vercel.app/golf-recovery-faq</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bmw-wellness-landing.vercel.app/golf-recovery-faq" />
+    <xhtml:link rel="alternate" hreflang="en-SG" href="https://bmw-wellness-landing.vercel.app/golf-recovery-faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bmw-wellness-landing.vercel.app/golf-recovery-faq" />
+  </url>
+
+  <!-- Magnetic Therapy vs PEMF Comparison -->
+  <url>
+    <loc>https://bmw-wellness-landing.vercel.app/magnetic-therapy-vs-pemf</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bmw-wellness-landing.vercel.app/magnetic-therapy-vs-pemf" />
+    <xhtml:link rel="alternate" hreflang="en-SG" href="https://bmw-wellness-landing.vercel.app/magnetic-therapy-vs-pemf" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bmw-wellness-landing.vercel.app/magnetic-therapy-vs-pemf" />
+  </url>
+
+  <!-- Rotational Magnetic Therapy (旋磁疗法) Detail Page -->
+  <url>
+    <loc>https://bmw-wellness-landing.vercel.app/rotational-magnetic-therapy</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bmw-wellness-landing.vercel.app/rotational-magnetic-therapy" />
+    <xhtml:link rel="alternate" hreflang="en-SG" href="https://bmw-wellness-landing.vercel.app/rotational-magnetic-therapy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bmw-wellness-landing.vercel.app/rotational-magnetic-therapy" />
+  </url>
+
+  <!-- Buyers Guide -->
+  <url>
+    <loc>https://bmw-wellness-landing.vercel.app/buyers-guide</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bmw-wellness-landing.vercel.app/buyers-guide" />
+    <xhtml:link rel="alternate" hreflang="en-SG" href="https://bmw-wellness-landing.vercel.app/buyers-guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bmw-wellness-landing.vercel.app/buyers-guide" />
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://bmw-wellness-landing.vercel.app/about</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bmw-wellness-landing.vercel.app/about" />
+    <xhtml:link rel="alternate" hreflang="en-SG" href="https://bmw-wellness-landing.vercel.app/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bmw-wellness-landing.vercel.app/about" />
+  </url>
+
 </urlset>
