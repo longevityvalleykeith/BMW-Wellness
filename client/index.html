@@ -6,10 +6,211 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>DR MAGfield: Turn Pain into Pure Performance</title>
+
+    <!-- ============================================================
+         FIX #1: PAGE TITLE — PRESERVED (DR MAGfield product tagline)
+         ============================================================ -->
+    <title>DR MAGfield: Turn Pain into Pure Performance | BMW Wellness Cheras</title>
+
+    <!-- ============================================================
+         FIX #2: META DESCRIPTION — ADDED (Critical for SERP CTR)
+         ============================================================ -->
+    <meta name="description" content="Experience the DR MAGfield 12-in-1 Bio-Physics Energy Capsule Chamber at BMW Wellness, Cheras. Non-invasive therapy for seniors — natural pain relief, energy restoration & preventive wellness from RM 80/session." />
+
+    <!-- ============================================================
+         FIX #3: CANONICAL TAG — ADDED (Prevents duplicate content)
+         ============================================================ -->
+    <link rel="canonical" href="https://bmw-wellness-landing.vercel.app/" />
+
+    <!-- ============================================================
+         FIX #4: ROBOTS META — ADDED (Explicit indexing directives)
+         ============================================================ -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- ============================================================
+         FIX #5: OPEN GRAPH TAGS — ADDED (Social sharing)
+         ============================================================ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BMW Wellness" />
+    <meta property="og:title" content="DR MAGfield: Turn Pain into Pure Performance | BMW Wellness" />
+    <meta property="og:description" content="12-in-1 Bio-Physics Energy Capsule therapy for seniors in Cheras, Malaysia. Natural pain relief & preventive wellness from RM 80/session." />
+    <meta property="og:url" content="https://bmw-wellness-landing.vercel.app/" />
+    <meta property="og:image" content="https://wlwzfjlvwaosonorsvyf.supabase.co/storage/v1/object/public/brand-assets/bmw-wellness/bmw-experience-1.jpg" />
+    <meta property="og:locale" content="en_MY" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+
+    <!-- ============================================================
+         FIX #6: TWITTER CARD — ADDED (Social sharing)
+         ============================================================ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DR MAGfield | BMW Wellness Cheras" />
+    <meta name="twitter:description" content="12-in-1 Bio-Physics Energy Capsule therapy for seniors. Natural pain relief & preventive wellness from RM 80/session." />
+    <meta name="twitter:image" content="https://wlwzfjlvwaosonorsvyf.supabase.co/storage/v1/object/public/brand-assets/bmw-wellness/bmw-experience-1.jpg" />
+
+    <!-- ============================================================
+         FIX #7: GEO META TAGS — ADDED (Local SEO signal)
+         ============================================================ -->
+    <meta name="geo.region" content="MY-10" />
+    <meta name="geo.placename" content="BMW Wellness, Cheras, Kuala Lumpur" />
+    <meta name="geo.position" content="3.1070;101.7360" />
+    <meta name="ICBM" content="3.1070, 101.7360" />
+
+    <!-- ============================================================
+         EXISTING FONTS — PRESERVED
+         ============================================================ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;600;700;800&family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- ============================================================
+         FIX #8: STRUCTURED DATA — ADDED (LocalBusiness + Service + FAQ)
+         ============================================================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://bmw-wellness-landing.vercel.app/#localbusiness",
+          "name": "BMW Wellness 美康养身 Beauty Meridian Wellness",
+          "description": "Social health center for seniors offering DR MAGfield 12-in-1 Bio-Physics Energy Capsule therapy, bio-resonance scanning, and preventive wellness services in Cheras, Malaysia.",
+          "url": "https://bmw-wellness-landing.vercel.app",
+          "telephone": "+60-11-7032-1128",
+          "image": "https://wlwzfjlvwaosonorsvyf.supabase.co/storage/v1/object/public/brand-assets/bmw-wellness/bmw-experience-1.jpg",
+          "priceRange": "RM 80–200",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "11, Jalan 4/92B, Taman Kobena",
+            "addressLocality": "Cheras",
+            "addressRegion": "Kuala Lumpur",
+            "postalCode": "56000",
+            "addressCountry": "MY"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "3.1070",
+            "longitude": "101.7360"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+              "opens": "09:00",
+              "closes": "20:00"
+            }
+          ],
+          "sameAs": [
+            "https://wa.me/601170321128",
+            "https://t.me/BMW_Wellness_Bot"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Wellness Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "12-in-1 Energy Capsule Chamber",
+                  "description": "60-minute DR MAGfield bio-physics energy therapy session combining 9 advanced technologies"
+                },
+                "price": "80",
+                "priceCurrency": "MYR",
+                "offerFrequency": "per session"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Bio-Resonance Scan + Treatment",
+                  "description": "Advanced body energy scanning with personalized treatment plan"
+                },
+                "price": "0",
+                "priceCurrency": "MYR",
+                "availability": "https://schema.org/OnlyFirstVisit"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Bio-Physics Energy Capsule Therapy",
+          "provider": { "@id": "https://bmw-wellness-landing.vercel.app/#localbusiness" },
+          "areaServed": {
+            "@type": "City",
+            "name": "Cheras"
+          },
+          "description": "DR MAGfield 12-in-1 Bio-Physics Energy Capsule Chamber — non-invasive wellness therapy combining magnetic vortex, negative ions, far infrared, brain wave entrainment, jade energy stone, mono light therapy, graphene conduction, ozone sterilization, and magnetism for senior wellness.",
+          "name": "12-in-1 Energy Capsule Chamber | DR MAGfield BMW Wellness",
+          "url": "https://bmw-wellness-landing.vercel.app"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the DR MAGfield 12-in-1 Bio-Physics Energy Capsule Chamber?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The DR MAGfield 12-in-1 Bio-Physics Energy Capsule Chamber is a non-invasive wellness therapy combining 9 advanced bio-physics technologies — including magnetic vortex, negative ions, far infrared, brain wave entrainment, jade energy stone, mono light therapy, graphene conduction, ozone sterilization, and magnetism — designed for seniors seeking pain relief and energy restoration."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who is the 12-in-1 Capsule designed for?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The DR MAGfield 12-in-1 Capsule is specifically designed for seniors experiencing chronic pain, low energy, post-illness recovery needs, or those seeking preventive wellness. It is a non-invasive, medication-free therapy suitable for adults 50+."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does a session cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "12-in-1 Energy Capsule sessions start from RM 80 per 60-minute session. Bio-Resonance Scan is FREE for first-time visitors with any session booking."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is BMW Wellness located?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BMW Wellness is located at 11, Jalan 4/92B, Taman Kobena, Cheras, Malaysia. We serve seniors across the Klang Valley area."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need a booking?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we recommend booking in advance. You can book via WhatsApp at 011 703 21128, Telegram @BMW_Wellness_Bot, or through our website booking system."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is the therapy safe for seniors?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the DR MAGfield 12-in-1 Bio-Physics Energy Capsule Chamber is a non-invasive, medication-free therapy designed specifically for seniors. Our trained staff conduct a personalised wellness consultation before each session to ensure suitability."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://bmw-wellness-landing.vercel.app"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>
